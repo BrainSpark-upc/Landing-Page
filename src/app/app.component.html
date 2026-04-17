@@ -1,0 +1,272 @@
+<div class="app">
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="#hero" class="logo-link">
+        <img src="/logo.png" alt="Logo de Care-Labs" class="logo-img" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menú">
+      ☰
+    </button>
+
+    <nav class="menu" [class.open]="isMenuOpen">
+      <a href="#funciona" (click)="closeMenu()">¿Cómo funciona?</a>
+      <a href="#caracteristicas" (click)="closeMenu()">Características</a>
+      <a href="#beneficios" (click)="closeMenu()">Beneficios</a>
+      <a href="#faq" (click)="closeMenu()">Preguntas frecuentes</a>
+      <a href="#contacto" (click)="closeMenu()">Contacto</a>
+    </nav>
+
+    <a href="#contacto" class="cta">Solicitar demo</a>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay">
+      <div class="hero-card">
+        <h1>PulseReport</h1>
+        <h2>Comunicación clínica y trazabilidad en tiempo real</h2>
+        <p>
+          Digitaliza traspasos SBAR, seguimiento clínico, signos vitales
+          y eventos críticos en una plataforma segura, accesible y ordenada.
+        </p>
+
+        <div class="buttons">
+          <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
+          <a href="#funciona" class="btn btn-outline">Ver cómo funciona</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section id="problema" class="section section-light">
+    <div class="container">
+      <h2>¿Por qué PulseReport?</h2>
+      <p class="section-text">
+        En muchos entornos clínicos, la información todavía se registra en medios
+        dispersos, lo que dificulta la continuidad asistencial, la trazabilidad
+        de eventos críticos y la comunicación entre turnos. PulseReport ayuda a
+        centralizar procesos esenciales de enfermería cardiovascular y mejorar la
+        seguridad del paciente.
+      </p>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section id="funciona" class="section section-gradient">
+    <div class="container">
+      <h2>Así funciona en 3 pasos</h2>
+
+      <div class="grid three-cols">
+        <div class="card">
+          <h3>1. Registrar</h3>
+          <p>
+            Digitaliza traspasos SBAR, signos vitales, tratamientos y datos
+            básicos del paciente en un solo lugar.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>2. Monitorear</h3>
+          <p>
+            Consulta información clínica en tiempo real para dar seguimiento
+            más ordenado y oportuno a cada caso.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>3. Trazar</h3>
+          <p>
+            Mantén un historial de eventos y acciones con auditoría inalterable
+            para mejorar control, seguridad y continuidad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Características -->
+  <section id="caracteristicas" class="section">
+    <div class="container">
+      <h2>Características clave</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>SBAR digital</h3>
+          <p>
+            Estandariza el traspaso de información entre turnos y áreas
+            asistenciales.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Gestión básica de pacientes</h3>
+          <p>
+            Organiza datos esenciales del paciente para una atención más clara y estructurada.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Seguimiento de tratamientos</h3>
+          <p>
+            Registra y consulta tratamientos para mejorar la continuidad del cuidado.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Monitoreo de signos vitales</h3>
+          <p>
+            Lleva control clínico básico con información disponible en tiempo real.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Historial clínico digital</h3>
+          <p>
+            Centraliza la información relevante para una mejor consulta y seguimiento.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Log de auditoría inalterable</h3>
+          <p>
+            Mantén trazabilidad de eventos críticos y acciones dentro de la plataforma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios -->
+  <section id="beneficios" class="section section-soft">
+    <div class="container">
+      <h2>Beneficios</h2>
+
+      <ul class="benefit-list">
+        <li>Mejora la comunicación entre turnos y áreas asistenciales.</li>
+        <li>Reduce el riesgo de omisiones en procesos clínicos críticos.</li>
+        <li>Facilita la trazabilidad y el seguimiento de eventos importantes.</li>
+        <li>Organiza la información médica en tiempo real.</li>
+        <li>Contribuye a una atención más confiable, ordenada y oportuna.</li>
+      </ul>
+
+      <div class="tags">
+        <span>Seguro</span>
+        <span>Escalable</span>
+        <span>En tiempo real</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>¿PulseReport está orientado solo a enfermería cardiovascular?</h3>
+          <p>
+            Está pensado especialmente para ese entorno, pero su estructura puede
+            adaptarse a otros contextos clínicos especializados.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿La información puede consultarse en tiempo real?</h3>
+          <p>
+            Sí, la plataforma está orientada a permitir acceso rápido y actualizado
+            a los registros clínicos principales.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Es una solución para hospitales y clínicas?</h3>
+          <p>
+            Sí, está dirigida a hospitales, clínicas privadas, centros especializados
+            y profesionales de salud que necesiten orden y trazabilidad.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué modelo de servicio ofrece Care-Labs?</h3>
+          <p>
+            Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de
+            crecer según las necesidades de cada institución.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section section-contact">
+    <div class="container">
+      <h2>Contáctanos</h2>
+
+      <form class="form" (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <input
+          type="text"
+          name="nombre"
+          [(ngModel)]="form.nombre"
+          placeholder="Nombre"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="form.email"
+          placeholder="Correo electrónico"
+          required
+        />
+
+        <input
+          type="text"
+          name="institucion"
+          [(ngModel)]="form.institucion"
+          placeholder="Institución"
+          required
+        />
+
+        <textarea
+          name="mensaje"
+          [(ngModel)]="form.mensaje"
+          placeholder="Mensaje"
+          rows="5"
+          required
+        ></textarea>
+
+        <button type="submit" class="btn btn-primary">
+          Enviar mensaje
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>Care-Labs</h2>
+        <p>
+          Soluciones digitales para optimizar procesos clínicos críticos,
+          fortalecer la trazabilidad y mejorar la continuidad asistencial.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Inicio</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Care-Labs. Todos los derechos reservados.
+    </div>
+  </footer>
+</div>

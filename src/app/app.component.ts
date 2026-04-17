@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   isMenuOpen = false;
@@ -16,7 +16,7 @@ export class AppComponent {
     nombre: '',
     email: '',
     institucion: '',
-    mensaje: '',
+    mensaje: ''
   };
 
   toggleMenu(): void {
@@ -35,7 +35,7 @@ export class AppComponent {
       nombre: '',
       email: '',
       institucion: '',
-      mensaje: '',
+      mensaje: ''
     };
 
     this.isMenuOpen = false;
