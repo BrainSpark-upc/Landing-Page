@@ -1,121 +1,39 @@
-<<<<<<< HEAD
-# LandingPage
+# Landing Page - Care-Labs / PulseReport
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+This project is a landing page developed with Angular to present the value proposition of **Care-Labs** and its main product, **PulseReport**.
 
-## Development server
+## Description
 
-To start a local development server, run:
+**Care-Labs** is a startup focused on developing digital solutions for the healthcare sector, especially aimed at optimizing critical clinical processes in specialized areas such as cardiovascular nursing.
 
-```bash
-ng serve
-```
+Its main product, **PulseReport**, is designed to improve organization, clinical traceability, and communication between shifts and care areas through a secure, efficient, and real-time accessible web platform.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+This landing page presents the solution in a clear and visual way, including:
+- how it works,
+- key features,
+- benefits,
+- frequently asked questions,
+- and a contact section.
 
-## Code scaffolding
+## Technologies Used
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Angular
+- TypeScript
+- HTML
+- CSS
 
-```bash
-ng generate component component-name
-```
+## Main Structure
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The project mainly includes:
 
-```bash
-ng generate --help
-```
+- `src/app/app.component.html` → landing page structure
+- `src/app/app.component.css` → visual styling
+- `src/app/app.component.ts` → basic component logic
+- `public/` → static assets such as the logo
 
-## Building
+## Local Development
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# LandingPage
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
-
-## Development server
-
-To start a local development server, run:
+To start the development server, run:
 
 ```bash
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
->>>>>>> fe6eb642b45fb5424324b393f5d621a691fd9be7
