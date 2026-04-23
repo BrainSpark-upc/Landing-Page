@@ -17,6 +17,7 @@
       <a href="#beneficios" (click)="closeMenu()">Beneficios</a>
       <a href="#faq" (click)="closeMenu()">Preguntas frecuentes</a>
       <a href="#contacto" (click)="closeMenu()">Contacto</a>
+      <a href="#testimonials" (click)="closeMenu()">Testimonios</a>
     </nav>
 
     <a href="#contacto" class="cta">Solicitar demo</a>
@@ -201,6 +202,30 @@
       </div>
     </div>
   </section>
+  <!-- Testimonios -->
+  <section id="testimonials" class="section section-testimonials">
+    <div class="container">
+      <h2>Lo que dicen quienes probaron Care-Labs</h2>
+      <p class="section-text">
+        Profesionales de salud que ya estan viendo mejoras!
+      </p>
+
+      <div class="testimonials-panel">
+        <article class="testimonial-item" *ngFor="let testimony of testimonials">
+          <div class="testimonial-quote">“</div>
+          <div class="testimonial-content">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">{{ testimony.text }}</p>
+
+          <div class="testimonial-person">
+              <h3>{{ testimony.name }}</h3>
+              <p>{{ testimony.post }}</p>
+          </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Contacto -->
   <section id="contacto" class="section section-contact">
@@ -262,11 +287,13 @@
         <a href="#hero">Inicio</a>
         <a href="#caracteristicas">Características</a>
         <a href="#contacto">Contacto</a>
+        <a href="#testimonials">Testimonios</a>
       </div>
     </div>
 
     <div class="footer-copy">
       © 2026 Care-Labs. Todos los derechos reservados.
     </div>
+
   </footer>
 </div>

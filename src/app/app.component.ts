@@ -18,6 +18,28 @@ export class AppComponent {
     institucion: '',
     mensaje: ''
   };
+  testimonials = [
+    {
+      name: 'Gloria Carbajal',
+      post: 'Jefa de enfermeria',
+      text:
+        'Gracias a Care-Labs ordenar el traspaso de información y reducir confusiones entre turnos es ' +
+        'una realidad. La experiencia se siente mas moderna y profesional.'
+    },
+    {
+      name: 'Carlos Ramírez',
+      post: 'Coordinador clínico',
+      text:
+        'Nos gustó mucho la idea porque centraliza la información importante, lo hace flexible a nosotros y permite dar ' +
+        'seguimiento sin depender de registros dispersos o no digitalizados adecuadamente.'
+    },
+    {
+      name: 'Lucía Portocarrero',
+      post: 'Usuario piloto',
+      text:
+        'La interfaz es amigable y transmite confianza. Se nota que está pensada para mejorar el trabajo diario del personal de salud.'
+    }
+  ];
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
