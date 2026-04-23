@@ -64,6 +64,12 @@ a {
   color: #14b8a6;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .cta {
   background: #0f4db8;
   color: #ffffff;
@@ -393,13 +399,20 @@ a {
     padding: 16px 20px;
   }
 
+  .header-actions {
+    order: 2;
+    margin-left: auto;
+  }
+
   .menu-toggle {
     display: block;
-    margin-left: auto;
+    order: 3;
+    margin-left: 16px;
   }
 
   .menu {
     display: none;
+    order: 4;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
