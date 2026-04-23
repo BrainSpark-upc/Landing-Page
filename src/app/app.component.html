@@ -12,16 +12,19 @@
     </button>
 
     <nav class="menu" [class.open]="isMenuOpen">
-      <a href="#how-it-works" (click)="closeMenu()">¿Cómo funciona?</a>
-      <a href="#features" (click)="closeMenu()">Características</a>
-      <a href="#benefits" (click)="closeMenu()">Beneficios</a>
-      <a href="#faq" (click)="closeMenu()">Preguntas frecuentes</a>
-      <a href="#contact" (click)="closeMenu()">Contacto</a>
-      <a href="#testimonials" (click)="closeMenu()">Testimonios</a>
-      <a href="#about-us" (click)="closeMenu()">Nosotros</a>
+      <a href="#how-it-works" (click)="closeMenu()">{{ i18n.translate('nav.how-it-works') }}</a>
+      <a href="#features" (click)="closeMenu()">{{ i18n.translate('nav.features') }}</a>
+      <a href="#benefits" (click)="closeMenu()">{{ i18n.translate('nav.benefits') }}</a>
+      <a href="#faq" (click)="closeMenu()">{{ i18n.translate('nav.faq') }}</a>
+      <a href="#contact" (click)="closeMenu()">{{ i18n.translate('nav.contact') }}</a>
+      <a href="#testimonials" (click)="closeMenu()">{{ i18n.translate('nav.testimonials') }}</a>
+      <a href="#about-us" (click)="closeMenu()">{{ i18n.translate('nav.about-us') }}</a>
     </nav>
 
-    <a href="#contact" class="cta">Solicitar demo</a>
+    <div class="header-actions">
+      <app-language-switcher></app-language-switcher>
+      <a href="#contact" class="cta">{{ i18n.translate('cta.demo') }}</a>
+    </div>
   </header>
 
   <!-- Hero -->
@@ -29,15 +32,14 @@
     <div class="hero-overlay">
       <div class="hero-card">
         <h1>PulseReport</h1>
-        <h2>Comunicación clínica y trazabilidad en tiempo real</h2>
+        <h2>{{ i18n.translate('hero.title') }}</h2>
         <p>
-          Digitaliza traspasos SBAR, seguimiento clínico, signos vitales
-          y eventos críticos en una plataforma segura, accesible y ordenada.
+          {{ i18n.translate('hero.subtitle') }}
         </p>
 
         <div class="buttons">
-          <a href="#contact" class="btn btn-primary">Solicitar demo</a>
-          <a href="#how-it-works" class="btn btn-outline">Ver cómo funciona</a>
+          <a href="#contact" class="btn btn-primary">{{ i18n.translate('cta.demo') }}</a>
+          <a href="#how-it-works" class="btn btn-outline">{{ i18n.translate('cta.how-it-works') }}</a>
         </div>
       </div>
     </div>
@@ -46,13 +48,9 @@
   <!-- Problema -->
   <section id="problem" class="section section-light">
     <div class="container">
-      <h2>¿Por qué PulseReport?</h2>
+      <h2>{{ i18n.translate('problem.title') }}</h2>
       <p class="section-text">
-        En muchos entornos clínicos, la información todavía se registra en medios
-        dispersos, lo que dificulta la continuidad asistencial, la trazabilidad
-        de eventos críticos y la comunicación entre turnos. PulseReport ayuda a
-        centralizar procesos esenciales de enfermería cardiovascular y mejorar la
-        seguridad del paciente.
+        {{ i18n.translate('problem.desc') }}
       </p>
     </div>
   </section>
@@ -60,30 +58,27 @@
   <!-- Cómo funciona -->
   <section id="how-it-works" class="section section-gradient">
     <div class="container">
-      <h2>Así funciona en 3 pasos</h2>
+      <h2>{{ i18n.translate('steps.title') }}</h2>
 
       <div class="grid three-cols">
         <div class="card">
-          <h3>1. Registrar</h3>
+          <h3>{{ i18n.translate('steps.1.title') }}</h3>
           <p>
-            Digitaliza traspasos SBAR, signos vitales, tratamientos y datos
-            básicos del paciente en un solo lugar.
+            {{ i18n.translate('steps.1.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>2. Monitorear</h3>
+          <h3>{{ i18n.translate('steps.2.title') }}</h3>
           <p>
-            Consulta información clínica en tiempo real para dar seguimiento
-            más ordenado y oportuno a cada caso.
+            {{ i18n.translate('steps.2.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>3. Trazar</h3>
+          <h3>{{ i18n.translate('steps.3.title') }}</h3>
           <p>
-            Mantén un historial de eventos y acciones con auditoría inalterable
-            para mejorar control, seguridad y continuidad.
+            {{ i18n.translate('steps.3.desc') }}
           </p>
         </div>
       </div>
@@ -93,49 +88,48 @@
   <!-- Características -->
   <section id="features" class="section">
     <div class="container">
-      <h2>Características clave</h2>
+      <h2>{{ i18n.translate('features.title') }}</h2>
 
       <div class="grid">
         <div class="card">
-          <h3>SBAR digital</h3>
+          <h3>{{ i18n.translate('features.1.title') }}</h3>
           <p>
-            Estandariza el traspaso de información entre turnos y áreas
-            asistenciales.
+            {{ i18n.translate('features.1.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>Gestión básica de pacientes</h3>
+          <h3>{{ i18n.translate('features.2.title') }}</h3>
           <p>
-            Organiza datos esenciales del paciente para una atención más clara y estructurada.
+            {{ i18n.translate('features.2.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>Seguimiento de tratamientos</h3>
+          <h3>{{ i18n.translate('features.3.title') }}</h3>
           <p>
-            Registra y consulta tratamientos para mejorar la continuidad del cuidado.
+            {{ i18n.translate('features.3.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>Monitoreo de signos vitales</h3>
+          <h3>{{ i18n.translate('features.4.title') }}</h3>
           <p>
-            Lleva control clínico básico con información disponible en tiempo real.
+            {{ i18n.translate('features.4.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>Historial clínico digital</h3>
+          <h3>{{ i18n.translate('features.5.title') }}</h3>
           <p>
-            Centraliza la información relevante para una mejor consulta y seguimiento.
+            {{ i18n.translate('features.5.desc') }}
           </p>
         </div>
 
         <div class="card">
-          <h3>Log de auditoría inalterable</h3>
+          <h3>{{ i18n.translate('features.6.title') }}</h3>
           <p>
-            Mantén trazabilidad de eventos críticos y acciones dentro de la plataforma.
+            {{ i18n.translate('features.6.desc') }}
           </p>
         </div>
       </div>
@@ -145,20 +139,20 @@
   <!-- Beneficios -->
   <section id="benefits" class="section section-soft">
     <div class="container">
-      <h2>Beneficios</h2>
+      <h2>{{ i18n.translate('benefits.title') }}</h2>
 
       <ul class="benefit-list">
-        <li>Mejora la comunicación entre turnos y áreas asistenciales.</li>
-        <li>Reduce el riesgo de omisiones en procesos clínicos críticos.</li>
-        <li>Facilita la trazabilidad y el seguimiento de eventos importantes.</li>
-        <li>Organiza la información médica en tiempo real.</li>
-        <li>Contribuye a una atención más confiable, ordenada y oportuna.</li>
+        <li>{{ i18n.translate('benefits.1') }}</li>
+        <li>{{ i18n.translate('benefits.2') }}</li>
+        <li>{{ i18n.translate('benefits.3') }}</li>
+        <li>{{ i18n.translate('benefits.4') }}</li>
+        <li>{{ i18n.translate('benefits.5') }}</li>
       </ul>
 
       <div class="tags">
-        <span>Seguro</span>
-        <span>Escalable</span>
-        <span>En tiempo real</span>
+        <span>{{ i18n.translate('benefits.tag.1') }}</span>
+        <span>{{ i18n.translate('benefits.tag.2') }}</span>
+        <span>{{ i18n.translate('benefits.tag.3') }}</span>
       </div>
     </div>
   </section>
@@ -166,38 +160,34 @@
   <!-- FAQ -->
   <section id="faq" class="section">
     <div class="container">
-      <h2>Preguntas frecuentes</h2>
+      <h2>{{ i18n.translate('faq.title') }}</h2>
 
       <div class="faq">
         <div class="faq-item">
-          <h3>¿PulseReport está orientado solo a enfermería cardiovascular?</h3>
+          <h3>{{ i18n.translate('faq.1.q') }}</h3>
           <p>
-            Está pensado especialmente para ese entorno, pero su estructura puede
-            adaptarse a otros contextos clínicos especializados.
+            {{ i18n.translate('faq.1.a') }}
           </p>
         </div>
 
         <div class="faq-item">
-          <h3>¿La información puede consultarse en tiempo real?</h3>
+          <h3>{{ i18n.translate('faq.2.q') }}</h3>
           <p>
-            Sí, la plataforma está orientada a permitir acceso rápido y actualizado
-            a los registros clínicos principales.
+            {{ i18n.translate('faq.2.a') }}
           </p>
         </div>
 
         <div class="faq-item">
-          <h3>¿Es una solución para hospitales y clínicas?</h3>
+          <h3>{{ i18n.translate('faq.3.q') }}</h3>
           <p>
-            Sí, está dirigida a hospitales, clínicas privadas, centros especializados
-            y profesionales de salud que necesiten orden y trazabilidad.
+            {{ i18n.translate('faq.3.a') }}
           </p>
         </div>
 
         <div class="faq-item">
-          <h3>¿Qué modelo de servicio ofrece Care-Labs?</h3>
+          <h3>{{ i18n.translate('faq.4.q') }}</h3>
           <p>
-            Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de
-            crecer según las necesidades de cada institución.
+            {{ i18n.translate('faq.4.a') }}
           </p>
         </div>
       </div>
@@ -206,9 +196,9 @@
   <!-- Testimonios -->
   <section id="testimonials" class="section section-testimonials">
     <div class="container">
-      <h2>Lo que dicen quienes probaron Care-Labs</h2>
+      <h2>{{ i18n.translate('testimonials.title') }}</h2>
       <p class="section-text">
-        Profesionales de salud que ya estan viendo mejoras!
+        {{ i18n.translate('testimonials.subtitle') }}
       </p>
 
       <div class="testimonials-panel">
@@ -230,9 +220,9 @@
   <!-- Equipo -->
   <section id="about-us" class="section section-team">
     <div class="container">
-      <h2>Nuestro equipo</h2>
+      <h2>{{ i18n.translate('team.title') }}</h2>
       <p class="section-text">
-        Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día
+        {{ i18n.translate('team.subtitle') }}
       </p>
 
       <div class="team-grid">
@@ -253,14 +243,14 @@
   <!-- Contacto -->
   <section id="contact" class="section section-contact">
     <div class="container">
-      <h2>Contáctanos</h2>
+      <h2>{{ i18n.translate('contact.title') }}</h2>
 
       <form class="form" (ngSubmit)="submitForm()" #contactForm="ngForm">
         <input
           type="text"
           name="nombre"
           [(ngModel)]="form.nombre"
-          placeholder="Nombre"
+          [placeholder]="i18n.translate('contact.name')"
           required
         />
 
@@ -268,7 +258,7 @@
           type="email"
           name="email"
           [(ngModel)]="form.email"
-          placeholder="Correo electrónico"
+          [placeholder]="i18n.translate('contact.email')"
           required
         />
 
@@ -276,20 +266,20 @@
           type="text"
           name="institucion"
           [(ngModel)]="form.institucion"
-          placeholder="Institución"
+          [placeholder]="i18n.translate('contact.institution')"
           required
         />
 
         <textarea
           name="mensaje"
           [(ngModel)]="form.mensaje"
-          placeholder="Mensaje"
+          [placeholder]="i18n.translate('contact.message')"
           rows="5"
           required
         ></textarea>
 
         <button type="submit" class="btn btn-primary">
-          Enviar mensaje
+          {{ i18n.translate('contact.submit') }}
         </button>
       </form>
     </div>
@@ -301,22 +291,21 @@
       <div class="footer-brand">
         <h2>Care-Labs</h2>
         <p>
-          Soluciones digitales para optimizar procesos clínicos críticos,
-          fortalecer la trazabilidad y mejorar la continuidad asistencial.
+          {{ i18n.translate('footer.desc') }}
         </p>
       </div>
 
       <div class="footer-links">
-        <a href="#home">Inicio</a>
-        <a href="#features">Características</a>
-        <a href="#contact">Contacto</a>
-        <a href="#testimonials">Testimonios</a>
-        <a href="#about-us">Nosotros</a>
+        <a href="#home">{{ i18n.translate('footer.nav.home') }}</a>
+        <a href="#features">{{ i18n.translate('nav.features') }}</a>
+        <a href="#contact">{{ i18n.translate('nav.contact') }}</a>
+        <a href="#testimonials">{{ i18n.translate('nav.testimonials') }}</a>
+        <a href="#about-us">{{ i18n.translate('nav.about-us') }}</a>
       </div>
     </div>
 
     <div class="footer-copy">
-      © 2026 Care-Labs. Todos los derechos reservados.
+      {{ i18n.translate('footer.copy') }}
     </div>
 
   </footer>
