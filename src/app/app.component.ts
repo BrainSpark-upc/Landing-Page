@@ -40,6 +40,28 @@ export class AppComponent {
         'La interfaz es amigable y transmite confianza. Se nota que está pensada para mejorar el trabajo diario del personal de salud.'
     }
   ];
+  team = [
+    {
+      photo: "Adrian-photo.jpg",
+      name: "Adrian Rios",
+      post: "Lider de Equipo",
+    },
+    {
+      photo: "Alex-photo.jpg",
+      name: "Alex Aliaga",
+      post: "Miembro"
+    },
+    {
+      photo: "Johan-photo.png",
+      name: "Johan Huaman",
+      post: "Miembro"
+    },
+    {
+      photo: "Anhelo-photo.jpg",
+      name: "Anhelo Rocca",
+      post: "Miembro"
+    }
+  ]
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;

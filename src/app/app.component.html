@@ -18,6 +18,7 @@
       <a href="#faq" (click)="closeMenu()">Preguntas frecuentes</a>
       <a href="#contacto" (click)="closeMenu()">Contacto</a>
       <a href="#testimonials" (click)="closeMenu()">Testimonios</a>
+      <a href="#team" (click)="closeMenu()">Nosotros</a>
     </nav>
 
     <a href="#contacto" class="cta">Solicitar demo</a>
@@ -226,6 +227,28 @@
       </div>
     </div>
   </section>
+  <!-- Equipo -->
+  <section id="team" class="section section-team">
+    <div class="container">
+      <h2>Nuestro equipo</h2>
+      <p class="section-text">
+        Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día
+      </p>
+
+      <div class="team-grid">
+        <article class="team-card" *ngFor="let member of team">
+          <div class="team-photo">
+            <img [src]="member.photo" alt="Foto del integrante" />
+          </div>
+
+          <div class="team-info">
+            <h3>{{ member.name }}</h3>
+            <p class="team-role">{{ member.post }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Contacto -->
   <section id="contacto" class="section section-contact">
@@ -288,6 +311,7 @@
         <a href="#caracteristicas">Características</a>
         <a href="#contacto">Contacto</a>
         <a href="#testimonials">Testimonios</a>
+        <a href="#team">Nosotros</a>
       </div>
     </div>
 
