@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PulseReport | Care-Labs</title>
+
+    <link rel="icon" type="image/png" href="assets/pestana-logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<div class="app">
+    <header class="navbar">
+        <div class="logo">
+            <a href="#home" class="logo-link">
+                <img
+                        src="assets/logo.png"
+                        alt="Logo de Care-Labs"
+                        class="logo-img"
+                        data-i18n-alt="accessibility.logo"
+                />
+            </a>
+        </div>
+
+        <button
+                id="menu-toggle"
+                class="menu-toggle"
+                aria-label="Abrir menú"
+                data-i18n-aria-label="accessibility.open-menu"
+        >
+            ☰
+        </button>
+
+        <nav id="menu" class="menu">
+            <a href="#how-it-works" data-i18n="nav.how-it-works">¿Cómo funciona?</a>
+            <a href="#features" data-i18n="nav.features">Características</a>
+            <a href="#benefits" data-i18n="nav.benefits">Beneficios</a>
+            <a href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a>
+            <a href="#contact" data-i18n="nav.contact">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="language-button" class="language-button" type="button">
+                ES
+            </button>
+
+            <a href="#contact" class="cta" data-i18n="cta.demo">
+                Solicitar demo
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-card">
+                    <h1 data-i18n="hero.brand">PulseReport</h1>
+
+                    <h2 data-i18n="hero.title">
+                        Evita pérdidas de información clínica entre turnos
+                    </h2>
+
+                    <p data-i18n="hero.subtitle">
+                        Centraliza traspasos SBAR, signos vitales, tratamientos y eventos críticos en una sola plataforma segura, clara y accesible en tiempo real.
+                    </p>
+
+                    <div class="buttons">
+                        <a href="#contact" class="btn btn-primary" data-i18n="cta.demo">
+                            Solicitar demo
+                        </a>
+
+                        <a href="#how-it-works" class="btn btn-outline" data-i18n="cta.how-it-works">
+                            Ver cómo funciona
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="section">
+            <div class="section-content">
+                <h2 data-i18n="problem.title">El problema que resolvemos</h2>
+
+                <p data-i18n="problem.desc">
+                    En muchos entornos clínicos, la información del paciente se encuentra dispersa entre hojas, chats, registros parciales o procesos manuales. Esto puede generar omisiones, retrasos y pérdida de continuidad asistencial. PulseReport centraliza la comunicación clínica y la trazabilidad de eventos para ayudar al personal de salud a trabajar con más orden, claridad y seguridad.
+                </p>
+            </div>
+        </section>
+
+        <section id="audience" class="section section-light">
+            <div class="section-content">
+                <h2 data-i18n="audience.title">¿A quién va dirigido?</h2>
+
+                <div class="cards-grid three-columns">
+                    <article class="card">
+                        <h3 data-i18n="audience.1.title">Hospitales</h3>
+                        <p data-i18n="audience.1.desc">
+                            Instituciones que necesitan mejorar la continuidad asistencial y la trazabilidad clínica entre áreas y turnos.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="audience.2.title">Clínicas privadas</h3>
+                        <p data-i18n="audience.2.desc">
+                            Centros que buscan digitalizar procesos clínicos críticos y organizar mejor la información del paciente.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="audience.3.title">Áreas de enfermería cardiovascular</h3>
+                        <p data-i18n="audience.3.desc">
+                            Equipos que requieren registrar SBAR, signos vitales, tratamientos y eventos clínicos con mayor orden y rapidez.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="section">
+            <div class="section-content">
+                <h2 data-i18n="steps.title">Así funciona en 3 pasos</h2>
+
+                <div class="cards-grid three-columns">
+                    <article class="card">
+                        <span class="card-number">01</span>
+                        <h3 data-i18n="steps.1.title">Registrar información clínica</h3>
+                        <p data-i18n="steps.1.desc">
+                            Registra traspasos SBAR, signos vitales, tratamientos y eventos clínicos en una sola plataforma.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-number">02</span>
+                        <h3 data-i18n="steps.2.title">Compartir y monitorear</h3>
+                        <p data-i18n="steps.2.desc">
+                            Consulta información actualizada en tiempo real para dar continuidad asistencial entre turnos y áreas.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <span class="card-number">03</span>
+                        <h3 data-i18n="steps.3.title">Trazar y auditar</h3>
+                        <p data-i18n="steps.3.desc">
+                            Mantén un historial claro de acciones, eventos y decisiones para mejorar control, seguimiento y seguridad.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section section-light">
+            <div class="section-content">
+                <h2 data-i18n="features.title">Características clave</h2>
+
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3 data-i18n="features.1.title">SBAR digital</h3>
+                        <p data-i18n="features.1.desc">
+                            Estandariza el traspaso de información entre turnos y áreas asistenciales.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="features.2.title">Gestión básica de pacientes</h3>
+                        <p data-i18n="features.2.desc">
+                            Organiza datos esenciales del paciente para una atención más clara y estructurada.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="features.3.title">Seguimiento de tratamientos</h3>
+                        <p data-i18n="features.3.desc">
+                            Registra y consulta tratamientos para mejorar la continuidad del cuidado.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="features.4.title">Monitoreo de signos vitales</h3>
+                        <p data-i18n="features.4.desc">
+                            Lleva control clínico básico con información disponible en tiempo real.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="features.5.title">Historial clínico digital</h3>
+                        <p data-i18n="features.5.desc">
+                            Centraliza la información relevante para una mejor consulta y seguimiento.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3 data-i18n="features.6.title">Log de auditoría inalterable</h3>
+                        <p data-i18n="features.6.desc">
+                            Mantén trazabilidad de eventos críticos y acciones dentro de la plataforma.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section">
+            <div class="section-content benefits-layout">
+                <div>
+                    <h2 data-i18n="benefits.title">Beneficios</h2>
+
+                    <ul class="benefits-list">
+                        <li data-i18n="benefits.1">Reduce pérdidas de información entre turnos.</li>
+                        <li data-i18n="benefits.2">Facilita el seguimiento clínico del paciente en tiempo real.</li>
+                        <li data-i18n="benefits.3">Mejora la trazabilidad de eventos y acciones importantes.</li>
+                        <li data-i18n="benefits.4">Disminuye la dependencia de registros dispersos o manuales.</li>
+                        <li data-i18n="benefits.5">Contribuye a una atención más segura, ordenada y oportuna.</li>
+                    </ul>
+                </div>
+
+                <div class="benefits-tags">
+                    <span data-i18n="benefits.tag.1">Seguro</span>
+                    <span data-i18n="benefits.tag.2">Escalable</span>
+                    <span data-i18n="benefits.tag.3">En tiempo real</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section section-light">
+            <div class="section-content">
+                <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
+
+                <div class="faq-list">
+                    <details>
+                        <summary data-i18n="faq.1.q">¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
+                        <p data-i18n="faq.1.a">
+                            Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary data-i18n="faq.2.q">¿La información puede consultarse en tiempo real?</summary>
+                        <p data-i18n="faq.2.a">
+                            Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary data-i18n="faq.3.q">¿Es una solución para hospitales y clínicas?</summary>
+                        <p data-i18n="faq.3.a">
+                            Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary data-i18n="faq.4.q">¿Qué modelo de servicio ofrece Care-Labs?</summary>
+                        <p data-i18n="faq.4.a">
+                            Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <div class="section-content">
+                <h2 data-i18n="testimonials.title">Lo que dicen quienes probaron Care-Labs</h2>
+                <p class="section-subtitle" data-i18n="testimonials.subtitle">
+                    Profesionales de salud que ya están viendo mejoras
+                </p>
+
+                <div class="cards-grid three-columns">
+                    <article class="card testimonial-card">
+                        <p data-i18n="testimonials.1.text">
+                            Nos permite registrar y revisar información crítica con mayor orden entre turnos.
+                        </p>
+                        <h3 data-i18n="testimonials.1.name">Gloria Carbajal</h3>
+                        <span data-i18n="testimonials.1.role">Jefa de enfermería</span>
+                    </article>
+
+                    <article class="card testimonial-card">
+                        <p data-i18n="testimonials.2.text">
+                            La centralización de signos vitales, tratamientos y eventos mejora mucho el seguimiento del paciente.
+                        </p>
+                        <h3 data-i18n="testimonials.2.name">Carlos Ramírez</h3>
+                        <span data-i18n="testimonials.2.role">Coordinador clínico</span>
+                    </article>
+
+                    <article class="card testimonial-card">
+                        <p data-i18n="testimonials.3.text">
+                            La propuesta transmite confianza y orden. Se nota que está pensada para la continuidad asistencial.
+                        </p>
+                        <h3 data-i18n="testimonials.3.name">Lucía Portocarrero</h3>
+                        <span data-i18n="testimonials.3.role">Usuario piloto</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="section section-light">
+            <div class="section-content">
+                <h2 data-i18n="team.title">Nuestro equipo</h2>
+
+                <p class="section-subtitle" data-i18n="team.subtitle">
+                    Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día.
+                </p>
+
+                <div class="team-grid">
+                    <article class="team-card">
+                        <img src="assets/Adrian-photo.jpg" alt="Adrian Rios" />
+                        <h3 data-i18n="team.1.name">Adrian Rios</h3>
+                        <p data-i18n="team.1.role">Líder de proyecto</p>
+                    </article>
+
+                    <article class="team-card">
+                        <img src="assets/Alex-photo.jpg" alt="Alexander Aliaga" />
+                        <h3 data-i18n="team.2.name">Alexander Aliaga</h3>
+                        <p data-i18n="team.2.role">Desarrollador frontend</p>
+                    </article>
+
+                    <article class="team-card">
+                        <img src="assets/Anhelo-photo.jpg" alt="Anhelo" />
+                        <h3 data-i18n="team.3.name">Anhelo</h3>
+                        <p data-i18n="team.3.role">Diseñador UX/UI</p>
+                    </article>
+
+                    <article class="team-card">
+                        <img src="assets/Johan-photo.png" alt="Johan" />
+                        <h3 data-i18n="team.4.name">Johan</h3>
+                        <p data-i18n="team.4.role">Desarrollador backend</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="section-content contact-layout">
+                <div>
+                    <h2 data-i18n="contact.title">Contáctanos</h2>
+                    <p data-i18n="contact.desc">
+                        Solicita una demo y conoce cómo PulseReport puede ayudar a tu institución a mejorar la continuidad clínica, la trazabilidad y el seguimiento en tiempo real.
+                    </p>
+                </div>
+
+                <form id="contact-form" class="form">
+                    <input
+                            type="text"
+                            name="name"
+                            required
+                            placeholder="Nombre"
+                            data-i18n-placeholder="contact.name"
+                    />
+
+                    <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="Correo electrónico"
+                            data-i18n-placeholder="contact.email"
+                    />
+
+                    <input
+                            type="text"
+                            name="institution"
+                            required
+                            placeholder="Institución"
+                            data-i18n-placeholder="contact.institution"
+                    />
+
+                    <textarea
+                            name="message"
+                            rows="5"
+                            required
+                            placeholder="Mensaje"
+                            data-i18n-placeholder="contact.message"
+                    ></textarea>
+
+                    <button type="submit" data-i18n="contact.submit">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="assets/logo.png" alt="Logo de Care-Labs" />
+
+            <p data-i18n="footer.desc">
+                Soluciones digitales para optimizar procesos clínicos críticos, fortalecer la trazabilidad y mejorar la continuidad asistencial.
+            </p>
+
+            <nav>
+                <a href="#home" data-i18n="footer.nav.home">Inicio</a>
+                <a href="#features" data-i18n="nav.features">Características</a>
+                <a href="#contact" data-i18n="nav.contact">Contacto</a>
+            </nav>
+
+            <small data-i18n="footer.copy">
+                © 2026 Care-Labs. Todos los derechos reservados.
+            </small>
+        </div>
+    </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
