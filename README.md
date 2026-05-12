@@ -31,7 +31,7 @@ The project mainly includes:
 - `src/app/app.component.ts` → basic component logic
 - `public/` → static assets such as the logo
 
-## Local Development
+## Local Development.
 
 To start the development server, run:
 
