@@ -76,7 +76,7 @@ export class I18nService {
       'benefits.4': 'Organiza la información médica en tiempo real.',
       'benefits.5': 'Contribuye a una atención más confiable, ordenada y oportuna.',
       'benefits.tag.1': 'Seguro',
-      'benefits.tag.2': 'Escalable',
+      'benefits.tag.2': 'escalable',
       'benefits.tag.3': 'En tiempo real',
 
       'faq.title': 'Preguntas frecuentes',
