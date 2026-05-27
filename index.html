@@ -3,402 +3,559 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <title>PulseReport | Care-Labs</title>
+    <meta name="author" content="BrainSpark">
+    <meta name="description" content="PulseReport es una plataforma para centralizar traspasos SBAR, signos vitales, tratamientos y eventos críticos en entornos clínicos." />
+    <meta name="keywords" content="PulseReport, Care-Labs, SBAR, salud, enfermería, traspaso clínico, signos vitales, trazabilidad, hospital, clínica" />
+    <meta name="theme-color" content="#0066CC" />
 
+    <title>PulseReport | BrainSpark</title>
+
+    <link rel="canonical" href="https://pulsereport-frontend.web.app/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/pestana-logo.png" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Organization",
+            "name": "PulseReport",
+            "alternateName": "Care-Labs",
+            "url": "https://pulsereport-frontend.web.app/",
+            "email": "contacto@pulsereport.pe",
+            "areaServed": "PE"
+        }
+    </script>
 </head>
 <body>
-<div class="app">
-    <header class="navbar">
-        <div class="logo">
-            <a href="#home" class="logo-link">
-                <img
-                        src="assets/logo.png"
-                        alt="Logo de Care-Labs"
-                        class="logo-img"
-                        data-i18n-alt="accessibility.logo"
-                />
+<a href="#main-content" class="skip-link" id="skiplink">Saltar al contenido principal</a>
+<!-- Navigation -->
+<nav class="navbar" aria-label="Navegación Principal">
+    <div class="container">
+        <div class="nav-wrapper">
+            <a class="logo" id="logoLink" href="#" aria-label="Ir al inicio">
+                <img class="logo-image" src="assets/logo.png" alt="Logo PulseReport">
+                <span class="logo-text">PulseReport</span>
             </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#product-demo">Plataforma</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#how-it-works">¿Cómo funciona?</a></li>
+                <li><a href="#benefits">Beneficios</a></li>
+                <li><a href="#faq">Preguntas Frecuentes</a></li>
+                <li><a href="#team">Nosotros</a></li>
+            </ul>
+
+            <div class="nav-header-end">
+                <div class="language-swicher" role="group" aria-label="Idioma">
+                    <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">
+                        <span class="lang-btn__flag" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="flag-uk-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#flag-uk-clip)">
+                                    <!-- Blue background -->
+                                    <rect width="24" height="24" fill="#012169"/>
+                                    <!-- White diagonals (X) -->
+                                    <line x1="0" y1="0" x2="24" y2="24" stroke="#ffffff" stroke-width="4.8"/>
+                                    <line x1="24" y1="0" x2="0" y2="24" stroke="#ffffff" stroke-width="4.8"/>
+                                    <!-- Red diagonals (St Patrick's cross) -->
+                                    <line x1="0" y1="0" x2="24" y2="24" stroke="#C8102E" stroke-width="2"/>
+                                    <line x1="24" y1="0" x2="0" y2="24" stroke="#C8102E" stroke-width="2"/>
+                                    <!-- White cross -->
+                                    <rect x="10" y="0" width="4" height="24" fill="#ffffff"/>
+                                    <rect x="0" y="10" width="24" height="4" fill="#ffffff"/>
+                                    <!-- Red cross (St George's cross) -->
+                                    <rect x="10.8" y="0" width="2.4" height="24" fill="#C8102E"/>
+                                    <rect x="0" y="10.8" width="24" height="2.4" fill="#C8102E"/>
+                                </g>
+                                <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
+                            </svg>
+                        </span>
+                        <span class="lang-btn__label">EN</span>
+                    </button>
+                    <button type="button" class="lang-btn active" data-lang="es" aria-pressed="false">
+                        <span class="lang-btn__flag" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="flag-es-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#flag-es-clip)">
+                                    <rect width="24" height="24" fill="#aa151b"/>
+                                    <rect y="6" width="24" height="12" fill="#f1bf00"/>
+                                </g>
+                                <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
+                            </svg>
+                        </span>
+                        <span class="lang-btn__label">ES</span>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toogle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
+    </div>
+</nav>
 
-        <button
-                id="menu-toggle"
-                class="menu-toggle"
-                aria-label="Abrir menú"
-                data-i18n-aria-label="accessibility.open-menu"
-        >
-            ☰
-        </button>
-
-        <nav id="menu" class="menu">
-            <a href="#how-it-works" data-i18n="nav.how-it-works">¿Cómo funciona?</a>
-            <a href="#features" data-i18n="nav.features">Características</a>
-            <a href="#benefits" data-i18n="nav.benefits">Beneficios</a>
-            <a href="#faq" data-i18n="nav.faq">Preguntas frecuentes</a>
-            <a href="#contact" data-i18n="nav.contact">Contacto</a>
-        </nav>
-
-        <div class="header-actions">
-            <button id="language-button" class="language-button" type="button">
-                ES
-            </button>
-
-            <a href="#contact" class="cta" data-i18n="cta.demo">
-                Solicitar demo
-            </a>
+<main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-brand"><span class="hero-title__before">Pulse </span><span class="hero-title__accent">Report</span></h1>
+                <h2 class="hero-subtitle"><span class="hero-subtitle__before">Tu solución integral para el monitoreo de la salud cardiovascular.</span></h2>
+                <p class="hero-description">Centraliza traspasos SBAR, signos vitales, tratamientos y eventos críticos en la sala quirúrgica en una sola plataforma segura, clara y accesible en tiempo real.</p>
+                <div class="hero-buttons">
+                    <a class="btn btn-primary" id="demoBtn" href="https://pulsereport-frontend.web.app/">Visualizar Demo</a>
+                    <a class="btn btn-secondary" id="how-it-worksBtn" href="#how-it-works">Ver cómo funciona</a>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-overlay">
-                <div class="hero-card">
-                    <h1 data-i18n="hero.brand">PulseReport</h1>
+    <!--Product-Demo-->
+    <section class="product-demo" id="product-demo">
+        <div class="container">
+            <h2 class="section-title product-demo__title">Plataforma y propuesta de valor</h2>
+            <p class="product-demo__lead">
+                PulseReport centraliza la información clínica clave para que el traspaso entre turnos sea más claro, rápido y confiable.
+            </p>
 
-                    <h2 data-i18n="hero.title">
-                        Evita pérdidas de información clínica entre turnos
-                    </h2>
+            <div class="product-demo__value-grid">
+                <article class="value-card">
+                    <h3 class="value-card__label">Problema</h3>
+                    <p class="value-card__text">
+                        La información clínica suele quedar dispersa en hojas, chats o registros parciales, lo que genera omisiones y pérdida de continuidad asistencial.
+                    </p>
+                </article>
 
-                    <p data-i18n="hero.subtitle">
-                        Centraliza traspasos SBAR, signos vitales, tratamientos y eventos críticos en una sola plataforma segura, clara y accesible en tiempo real.
+                <article class="value-card">
+                    <h3 class="value-card__label">Para quién</h3>
+                    <p class="value-card__text">
+                        Hospitales, clínicas privadas y áreas de enfermería cardiovascular que necesitan registrar y consultar información crítica con orden.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-card__label">Beneficio</h3>
+                    <p class="value-card__text">
+                        Mejora la trazabilidad, reduce errores de traspaso y permite un seguimiento más seguro y oportuno del paciente.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who is it for? -->
+    <section class="who-is-it-for" id="who-is-it-for">
+        <div class="container">
+            <h2 class="section-title">¿A quién va dirigido PulseReport?</h2>
+            <div class="cards-grid three-columns">
+                <article class="card">
+                    <h3 class="audience1">Hospitales</h3>
+                    <p class="audience1-description">
+                        Instituciones que necesitan mejorar la continuidad asistencial y la trazabilidad clínica entre áreas y turnos.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="audience2">Clínicas privadas</h3>
+                    <p class="audience2-description">
+                        Centros que buscan digitalizar procesos clínicos críticos y organizar mejor la información del paciente.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="audience3-title">Áreas de enfermería cardiovascular</h3>
+                    <p class="audience3-description">
+                        Equipos que requieren registrar SBAR, signos vitales, tratamientos y eventos clínicos con mayor orden y rapidez.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--How-it-works-->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">¿Cómo funciona?</h2>
+
+            <div class="how-it-works-layout">
+                <div class="how-it-works-steps">
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Registrar información clínica</h3>
+                            <p>Captura traspasos SBAR, signos vitales, tratamientos y eventos críticos en un solo lugar.</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Compartir y monitorear</h3>
+                            <p>Consulta información actualizada en tiempo real para sostener la continuidad asistencial.</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Auditar y dar seguimiento</h3>
+                            <p>Revisa el historial de acciones y decisiones para mejorar control y seguridad clínica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="how-it-works-visual" aria-label="Resumen visual del flujo">
+                    <div class="how-it-works-image-frame">
+                        <div class="visual-summary">
+                            <p class="visual-summary__eyebrow">Flujo clínico</p>
+                            <ul class="visual-summary__list">
+                                <li>SBAR</li>
+                                <li>Signos vitales</li>
+                                <li>Tratamientos</li>
+                                <li>Eventos críticos</li>
+                                <li>Trazabilidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <!--Features-->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-head">
+                <p class="features-eyebrow">FUNCIONALIDADES</p>
+                <h2 class="section-title">Características principales</h2>
+                <p class="features-lead">
+                    PulseReport reúne las funciones necesarias para organizar, consultar y seguir información clínica relevante.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>SBAR digital</h3>
+                    <p>Estandariza el traspaso de información entre turnos y áreas asistenciales.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Gestión básica de pacientes</h3>
+                    <p>Organiza datos esenciales del paciente para una atención más clara y estructurada.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Seguimiento de tratamientos</h3>
+                    <p>Registra y consulta tratamientos para mejorar la continuidad del cuidado.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Monitoreo de signos vitales</h3>
+                    <p>Lleva control clínico básico con información disponible en tiempo real.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Historial clínico digital</h3>
+                    <p>Centraliza la información relevante para una mejor consulta y seguimiento.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Log de auditoría inalterable</h3>
+                    <p>Mantiene trazabilidad de eventos críticos y acciones dentro de la plataforma.</p>
+                </div>
+            </div>
+
+            <p class="features-footnote">
+                Confiabilidad, seguridad y control en cada etapa. <span>Tu operación, siempre mejor ordenada.</span>
+            </p>
+        </div>
+    </section>
+    <!--Benefits-->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="benefits-layout">
+                <div class="benefits-content">
+                    <p class="benefits-eyebrow">Salud cardiovascular</p>
+                    <h2 class="section-title benefits-heading">Beneficios de PulseReport</h2>
+                    <p class="benefits-lead">
+                        Una plataforma pensada para reducir desorden, mejorar seguimiento y reforzar la seguridad asistencial.
                     </p>
 
-                    <div class="buttons">
-                        <a href="#contact" class="btn btn-primary" data-i18n="cta.demo">
-                            Solicitar demo
-                        </a>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Reduce pérdidas de información</h3>
+                                <p>Evita que datos importantes queden dispersos entre distintos canales o formatos.</p>
+                            </div>
+                        </div>
 
-                        <a href="#how-it-works" class="btn btn-outline" data-i18n="cta.how-it-works">
-                            Ver cómo funciona
-                        </a>
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Facilita seguimiento en tiempo real</h3>
+                                <p>Permite revisar registros clínicos clave de forma más rápida y clara.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Mejora la trazabilidad</h3>
+                                <p>Conserva un historial útil para supervisión, auditoría y control interno.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Disminuye procesos manuales</h3>
+                                <p>Reduce la dependencia de hojas sueltas, mensajes dispersos o registros incompletos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-images" aria-hidden="true">
+                    <div class="benefit-photo benefit-photo--left">
+                        <img src="assets/logo.png" width="500" height="500" alt="" loading="lazy" decoding="async">
+                    </div>
+                    <div class="benefit-photo benefit-photo--right">
+                        <img src="assets/logo.png" width="500" height="500" alt="" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="problem" class="section">
-            <div class="section-content">
-                <h2 data-i18n="problem.title">El problema que resolvemos</h2>
-
-                <p data-i18n="problem.desc">
-                    En muchos entornos clínicos, la información del paciente se encuentra dispersa entre hojas, chats, registros parciales o procesos manuales. Esto puede generar omisiones, retrasos y pérdida de continuidad asistencial. PulseReport centraliza la comunicación clínica y la trazabilidad de eventos para ayudar al personal de salud a trabajar con más orden, claridad y seguridad.
-                </p>
-            </div>
-        </section>
-
-        <section id="audience" class="section section-light">
-            <div class="section-content">
-                <h2 data-i18n="audience.title">¿A quién va dirigido?</h2>
-
-                <div class="cards-grid three-columns">
-                    <article class="card">
-                        <h3 data-i18n="audience.1.title">Hospitales</h3>
-                        <p data-i18n="audience.1.desc">
-                            Instituciones que necesitan mejorar la continuidad asistencial y la trazabilidad clínica entre áreas y turnos.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="audience.2.title">Clínicas privadas</h3>
-                        <p data-i18n="audience.2.desc">
-                            Centros que buscan digitalizar procesos clínicos críticos y organizar mejor la información del paciente.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="audience.3.title">Áreas de enfermería cardiovascular</h3>
-                        <p data-i18n="audience.3.desc">
-                            Equipos que requieren registrar SBAR, signos vitales, tratamientos y eventos clínicos con mayor orden y rapidez.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="how-it-works" class="section">
-            <div class="section-content">
-                <h2 data-i18n="steps.title">Así funciona en 3 pasos</h2>
-
-                <div class="cards-grid three-columns">
-                    <article class="card">
-                        <span class="card-number">01</span>
-                        <h3 data-i18n="steps.1.title">Registrar información clínica</h3>
-                        <p data-i18n="steps.1.desc">
-                            Registra traspasos SBAR, signos vitales, tratamientos y eventos clínicos en una sola plataforma.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <span class="card-number">02</span>
-                        <h3 data-i18n="steps.2.title">Compartir y monitorear</h3>
-                        <p data-i18n="steps.2.desc">
-                            Consulta información actualizada en tiempo real para dar continuidad asistencial entre turnos y áreas.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <span class="card-number">03</span>
-                        <h3 data-i18n="steps.3.title">Trazar y auditar</h3>
-                        <p data-i18n="steps.3.desc">
-                            Mantén un historial claro de acciones, eventos y decisiones para mejorar control, seguimiento y seguridad.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="section section-light">
-            <div class="section-content">
-                <h2 data-i18n="features.title">Características clave</h2>
-
-                <div class="cards-grid">
-                    <article class="card">
-                        <h3 data-i18n="features.1.title">SBAR digital</h3>
-                        <p data-i18n="features.1.desc">
-                            Estandariza el traspaso de información entre turnos y áreas asistenciales.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="features.2.title">Gestión básica de pacientes</h3>
-                        <p data-i18n="features.2.desc">
-                            Organiza datos esenciales del paciente para una atención más clara y estructurada.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="features.3.title">Seguimiento de tratamientos</h3>
-                        <p data-i18n="features.3.desc">
-                            Registra y consulta tratamientos para mejorar la continuidad del cuidado.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="features.4.title">Monitoreo de signos vitales</h3>
-                        <p data-i18n="features.4.desc">
-                            Lleva control clínico básico con información disponible en tiempo real.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="features.5.title">Historial clínico digital</h3>
-                        <p data-i18n="features.5.desc">
-                            Centraliza la información relevante para una mejor consulta y seguimiento.
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <h3 data-i18n="features.6.title">Log de auditoría inalterable</h3>
-                        <p data-i18n="features.6.desc">
-                            Mantén trazabilidad de eventos críticos y acciones dentro de la plataforma.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="benefits" class="section">
-            <div class="section-content benefits-layout">
-                <div>
-                    <h2 data-i18n="benefits.title">Beneficios</h2>
-
-                    <ul class="benefits-list">
-                        <li data-i18n="benefits.1">Reduce pérdidas de información entre turnos.</li>
-                        <li data-i18n="benefits.2">Facilita el seguimiento clínico del paciente en tiempo real.</li>
-                        <li data-i18n="benefits.3">Mejora la trazabilidad de eventos y acciones importantes.</li>
-                        <li data-i18n="benefits.4">Disminuye la dependencia de registros dispersos o manuales.</li>
-                        <li data-i18n="benefits.5">Contribuye a una atención más segura, ordenada y oportuna.</li>
-                    </ul>
-                </div>
-
-                <div class="benefits-tags">
-                    <span data-i18n="benefits.tag.1">Seguro</span>
-                    <span data-i18n="benefits.tag.2">Escalable</span>
-                    <span data-i18n="benefits.tag.3">En tiempo real</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="section section-light">
-            <div class="section-content">
-                <h2 data-i18n="faq.title">Preguntas frecuentes</h2>
-
-                <div class="faq-list">
-                    <details>
-                        <summary data-i18n="faq.1.q">¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
-                        <p data-i18n="faq.1.a">
-                            Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary data-i18n="faq.2.q">¿La información puede consultarse en tiempo real?</summary>
-                        <p data-i18n="faq.2.a">
-                            Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary data-i18n="faq.3.q">¿Es una solución para hospitales y clínicas?</summary>
-                        <p data-i18n="faq.3.a">
-                            Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
-                        </p>
-                    </details>
-
-                    <details>
-                        <summary data-i18n="faq.4.q">¿Qué modelo de servicio ofrece Care-Labs?</summary>
-                        <p data-i18n="faq.4.a">
-                            Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
-                        </p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="section">
-            <div class="section-content">
-                <h2 data-i18n="testimonials.title">Lo que dicen quienes probaron Care-Labs</h2>
-                <p class="section-subtitle" data-i18n="testimonials.subtitle">
-                    Profesionales de salud que ya están viendo mejoras
-                </p>
-
-                <div class="cards-grid three-columns">
-                    <article class="card testimonial-card">
-                        <p data-i18n="testimonials.1.text">
-                            Nos permite registrar y revisar información crítica con mayor orden entre turnos.
-                        </p>
-                        <h3 data-i18n="testimonials.1.name">Gloria Carbajal</h3>
-                        <span data-i18n="testimonials.1.role">Jefa de enfermería</span>
-                    </article>
-
-                    <article class="card testimonial-card">
-                        <p data-i18n="testimonials.2.text">
-                            La centralización de signos vitales, tratamientos y eventos mejora mucho el seguimiento del paciente.
-                        </p>
-                        <h3 data-i18n="testimonials.2.name">Carlos Ramírez</h3>
-                        <span data-i18n="testimonials.2.role">Coordinador clínico</span>
-                    </article>
-
-                    <article class="card testimonial-card">
-                        <p data-i18n="testimonials.3.text">
-                            La propuesta transmite confianza y orden. Se nota que está pensada para la continuidad asistencial.
-                        </p>
-                        <h3 data-i18n="testimonials.3.name">Lucía Portocarrero</h3>
-                        <span data-i18n="testimonials.3.role">Usuario piloto</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="about-us" class="section section-light">
-            <div class="section-content">
-                <h2 data-i18n="team.title">Nuestro equipo</h2>
-
-                <p class="section-subtitle" data-i18n="team.subtitle">
-                    Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día.
-                </p>
-
-                <div class="team-grid">
-                    <article class="team-card">
-                        <img src="assets/Adrian-photo.jpg" alt="Adrian Rios" />
-                        <h3 data-i18n="team.1.name">Adrian Rios</h3>
-                        <p data-i18n="team.1.role">Líder de proyecto</p>
-                    </article>
-
-                    <article class="team-card">
-                        <img src="assets/Alex-photo.jpg" alt="Alexander Aliaga" />
-                        <h3 data-i18n="team.2.name">Alexander Aliaga</h3>
-                        <p data-i18n="team.2.role">Desarrollador frontend</p>
-                    </article>
-
-                    <article class="team-card">
-                        <img src="assets/Anhelo-photo.jpg" alt="Anhelo" />
-                        <h3 data-i18n="team.3.name">Anhelo</h3>
-                        <p data-i18n="team.3.role">Diseñador UX/UI</p>
-                    </article>
-
-                    <article class="team-card">
-                        <img src="assets/Johan-photo.png" alt="Johan" />
-                        <h3 data-i18n="team.4.name">Johan</h3>
-                        <p data-i18n="team.4.role">Desarrollador backend</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="section-content contact-layout">
-                <div>
-                    <h2 data-i18n="contact.title">Contáctanos</h2>
-                    <p data-i18n="contact.desc">
-                        Solicita una demo y conoce cómo PulseReport puede ayudar a tu institución a mejorar la continuidad clínica, la trazabilidad y el seguimiento en tiempo real.
-                    </p>
-                </div>
-
-                <form id="contact-form" class="form">
-                    <input
-                            type="text"
-                            name="name"
-                            required
-                            placeholder="Nombre"
-                            data-i18n-placeholder="contact.name"
-                    />
-
-                    <input
-                            type="email"
-                            name="email"
-                            required
-                            placeholder="Correo electrónico"
-                            data-i18n-placeholder="contact.email"
-                    />
-
-                    <input
-                            type="text"
-                            name="institution"
-                            required
-                            placeholder="Institución"
-                            data-i18n-placeholder="contact.institution"
-                    />
-
-                    <textarea
-                            name="message"
-                            rows="5"
-                            required
-                            placeholder="Mensaje"
-                            data-i18n-placeholder="contact.message"
-                    ></textarea>
-
-                    <button type="submit" data-i18n="contact.submit">
-                        Enviar mensaje
-                    </button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <img src="assets/logo.png" alt="Logo de Care-Labs" />
-
-            <p data-i18n="footer.desc">
-                Soluciones digitales para optimizar procesos clínicos críticos, fortalecer la trazabilidad y mejorar la continuidad asistencial.
+        </div>
+    </section>
+    <!--Team-->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Nuestro equipo</h2>
+            <p class="team-intro">
+                Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día.
             </p>
 
-            <nav>
-                <a href="#home" data-i18n="footer.nav.home">Inicio</a>
-                <a href="#features" data-i18n="nav.features">Características</a>
-                <a href="#contact" data-i18n="nav.contact">Contacto</a>
-            </nav>
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Adrian-photo.jpg" alt="Adrian Rios" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Líder de proyecto</p>
+                        <h3 class="team-name">Adrian Rios</h3>
+                    </div>
+                </article>
 
-            <small data-i18n="footer.copy">
-                © 2026 Care-Labs. Todos los derechos reservados.
-            </small>
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Alex-photo.jpg" alt="Alexander Aliaga" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Alexander Aliaga</h3>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Anhelo-photo.jpg" alt="Anhelo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Anhelo</h3>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Johan-photo.png" alt="Johan" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Johan</h3>
+                    </div>
+                </article>
+            </div>
         </div>
-    </footer>
-</div>
+    </section>
+    <!--FAQ-->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="faq__subtitle">Respuestas rápidas antes de agendar una demo.</p>
 
-<script src="js/main.js"></script>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
+                    <p class="faq-answer">
+                        Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿La información puede consultarse en tiempo real?</summary>
+                    <p class="faq-answer">
+                        Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Es una solución para hospitales y clínicas?</summary>
+                    <p class="faq-answer">
+                        Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué modelo de servicio ofrece Care-Labs?</summary>
+                    <p class="faq-answer">
+                        Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <!--Contact-->
+    <section class="contact-section" id="contact">
+        <div class="contact-hero">
+            <div class="container">
+                <h2 class="section-title">¿Listo para mejorar tu flujo clínico?</h2>
+                <p class="contact-hero__subtitle">
+                    Solicita una demo y conoce cómo PulseReport puede ayudarte a ordenar traspasos, trazabilidad y seguimiento.
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-split-wrap">
+            <div class="container">
+                <div class="contact-split-board" id="contact-info">
+                    <div class="contact-split__col contact-split__col--form">
+                        <p class="contact-split__eyebrow contact-split__eyebrow--form">Déjanos tus datos</p>
+                        <p class="contact-split__intro">
+                            Usa este formulario para consultas, cotizaciones o para solicitar una demo.
+                        </p>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="contact-form__grid2">
+                                <label class="contact-form__field">
+                                    <span class="contact-form__label contact-form__label--first">Nombre</span>
+                                    <input type="text" name="nombre" autocomplete="given-name" required>
+                                </label>
+
+                                <label class="contact-form__field">
+                                    <span class="contact-form__label contact-form__label--last">Apellidos</span>
+                                    <input type="text" name="apellidos" autocomplete="family-name" required>
+                                </label>
+                            </div>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--email">Correo electrónico</span>
+                                <input type="email" name="email" autocomplete="email" required>
+                            </label>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--country">Institución</span>
+                                <input type="text" name="institucion" autocomplete="organization" required>
+                            </label>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--message">Mensaje</span>
+                                <textarea
+                                  name="mensaje"
+                                  class="contact-form__textarea"
+                                  rows="4"
+                                  placeholder="Cuéntanos qué necesitas: demo, tipo de institución, volumen de usuarios, etc."
+                                ></textarea>
+                            </label>
+
+                            <button type="submit" class="btn contact-form__submit">Enviar al equipo</button>
+                        </form>
+
+                        <p id="contactSubmitNotice" class="contact-submit-notice" role="status" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="contact-split__col contact-split__col--info">
+                        <p class="contact-split__eyebrow contact-split__eyebrow--info">Contáctanos</p>
+
+                        <div class="contact-info-block">
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--phone">Correo</span>
+                                <p class="contact-info-row__dd">
+                                    <a href="mailto:contacto@pulsereport.pe">contacto@pulsereport.pe</a>
+                                </p>
+                            </div>
+
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--address">Enfoque</span>
+                                <p class="contact-info-row__dd contact-address-text">
+                                    Continuidad asistencial, trazabilidad clínica y soporte para equipos de salud.
+                                </p>
+                            </div>
+
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--email">Servicio</span>
+                                <p class="contact-info-row__dd">
+                                    Demo de la plataforma y evaluación de necesidades por institución.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="footer-brand">
+                    <img class="footer-brand__logo" src="assets/logo.png" alt="Logo PulseReport">
+                    <span class="footer-brand__name">PulseReport</span>
+                </h4>
+                <p>Gestión digital para la continuidad asistencial.</p>
+                <p class="footer-social">
+                    <a href="mailto:contacto@pulsereport.pe">contacto@pulsereport.pe</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Producto</h4>
+                <ul>
+                    <li><a href="#product-demo">Plataforma</a></li>
+                    <li><a href="#features">Características</a></li>
+                    <li><a href="#how-it-works">Cómo funciona</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#team">Nosotros</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Care-Labs. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
