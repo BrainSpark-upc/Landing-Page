@@ -276,6 +276,19 @@
     });
   }
 
+  /* How it works section */
+  function initStepCards() {
+    document.querySelectorAll('.step').forEach((card) => {
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.add('is-pulsing');
+          setTimeout(() => card.classList.remove('is-pulsing'), 600);
+        }
+      });
+    });
+  }
+
   //Boot function
   function boot() {
     initMobileNav();
@@ -287,6 +300,7 @@
     initContactForm();
     initSmoothScroll();
     initProblemCards();
+    initStepCards();
   }
 
   if (document.readyState === 'loading') {

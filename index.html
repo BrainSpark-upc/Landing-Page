@@ -418,43 +418,43 @@
     </section>
 
     <!--How-it-works-->
-    <section class="how-it-works" id="how-it-works">
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-it-works-heading">
         <div class="container">
-            <h2 class="section-title">¿Cómo funciona?</h2>
+            <h2 class="section-title" id="how-it-works-heading" data-i18n="steps.title">How it works in 3 steps</h2>
 
             <div class="how-it-works-layout">
                 <div class="how-it-works-steps">
-                    <div class="steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h3>Registrar información clínica</h3>
-                            <p>Captura traspasos SBAR, signos vitales, tratamientos y eventos críticos en un solo lugar.</p>
-                        </div>
+                    <ol class="steps" role="list">
+                        <li class="step reveal-on-scroll" data-reveal-delay="0" tabindex="0">
+                            <div class="step-number" aria-hidden="true">1</div>
+                            <h3 data-i18n="steps.1.title">Record clinical information</h3>
+                            <p data-i18n="steps.1.desc">Register SBAR handoffs, vital signs, treatments, and clinical events in one single platform.</p>
+                        </li>
 
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h3>Compartir y monitorear</h3>
-                            <p>Consulta información actualizada en tiempo real para sostener la continuidad asistencial.</p>
-                        </div>
+                        <li class="step reveal-on-scroll" data-reveal-delay="150" tabindex="0">
+                            <div class="step-number" aria-hidden="true">2</div>
+                            <h3 data-i18n="steps.2.title">Share and monitor</h3>
+                            <p data-i18n="steps.2.desc">Access updated information in real time to support continuity of care across shifts and departments.</p>
+                        </li>
 
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h3>Auditar y dar seguimiento</h3>
-                            <p>Revisa el historial de acciones y decisiones para mejorar control y seguridad clínica.</p>
-                        </div>
-                    </div>
+                        <li class="step reveal-on-scroll" data-reveal-delay="300" tabindex="0">
+                            <div class="step-number" aria-hidden="true">3</div>
+                            <h3 data-i18n="steps.3.title">Trace and audit</h3>
+                            <p data-i18n="steps.3.desc">Keep a clear history of actions, events, and decisions to improve control, follow-up, and safety.</p>
+                        </li>
+                    </ol>
                 </div>
 
-                <aside class="how-it-works-visual" aria-label="Resumen visual del flujo">
+                <aside class="how-it-works-visual reveal-on-scroll" data-reveal-delay="180" data-i18n-aria="steps.visual.aria" aria-label="Visual summary of the flow">
                     <div class="how-it-works-image-frame">
                         <div class="visual-summary">
-                            <p class="visual-summary__eyebrow">Flujo clínico</p>
-                            <ul class="visual-summary__list">
-                                <li>SBAR</li>
-                                <li>Signos vitales</li>
-                                <li>Tratamientos</li>
-                                <li>Eventos críticos</li>
-                                <li>Trazabilidad</li>
+                            <p class="visual-summary__eyebrow" data-i18n="steps.visual.eyebrow">Clinical flow</p>
+                            <ul class="visual-summary__list" role="list">
+                                <li data-i18n="steps.visual.1">SBAR</li>
+                                <li data-i18n="steps.visual.2">Vital signs</li>
+                                <li data-i18n="steps.visual.3">Treatments</li>
+                                <li data-i18n="steps.visual.4">Critical events</li>
+                                <li data-i18n="steps.visual.5">Traceability</li>
                             </ul>
                         </div>
                     </div>
