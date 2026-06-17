@@ -579,15 +579,50 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+    list-style: none;
+    position: relative;
 }
 
 .step {
+    position: relative;
     text-align: center;
     background: #ffffff;
     padding: 1.2rem 1rem;
     border-radius: 20px;
     border: 1px solid #dbeafe;
     box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+    outline: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Timeline connector between step cards (desktop / 3-column layout) */
+.step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 49px;
+    left: 100%;
+    width: 1.25rem;
+    height: 3px;
+    background: linear-gradient(90deg, rgba(15, 118, 110, 0.55), rgba(20, 184, 166, 0.55));
+    z-index: 1;
+}
+
+.step:hover,
+.step:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    border-color: rgba(15, 118, 110, 0.28);
+    outline: 2px solid rgba(15, 118, 110, 0.4);
+    outline-offset: 2px;
+}
+
+.step:hover .step-number,
+.step:focus-visible .step-number {
+    transform: scale(1.08);
+}
+
+.step.is-pulsing .step-number {
+    animation: step-number-pulse 0.6s ease;
 }
 
 .step-number {
@@ -602,10 +637,17 @@ section {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
+    transition: transform 0.25s ease;
     box-shadow:
             0 8px 20px rgba(15, 118, 110, 0.2),
             0 0 0 2px #ffffff,
             0 0 0 4px rgba(20, 184, 166, 0.4);
+}
+
+@keyframes step-number-pulse {
+    0% { box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2), 0 0 0 2px #ffffff, 0 0 0 4px rgba(20, 184, 166, 0.4); }
+    50% { box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2), 0 0 0 2px #ffffff, 0 0 0 9px rgba(20, 184, 166, 0.55); }
+    100% { box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2), 0 0 0 2px #ffffff, 0 0 0 4px rgba(20, 184, 166, 0.4); }
 }
 
 .step h3 {
@@ -1710,6 +1752,14 @@ section {
 
     .steps {
         grid-template-columns: 1fr;
+    }
+
+    .step:not(:last-child)::after {
+        top: 100%;
+        left: 50%;
+        width: 3px;
+        height: 1.25rem;
+        transform: translateX(-50%);
     }
 
     .benefits-visual__stats {
