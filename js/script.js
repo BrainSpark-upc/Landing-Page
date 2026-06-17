@@ -289,6 +289,19 @@
     });
   }
 
+  /* Features / Characteristics section */
+  function initFeatureCards() {
+    document.querySelectorAll('.feature-card').forEach((card) => {
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.add('is-pulsing');
+          setTimeout(() => card.classList.remove('is-pulsing'), 600);
+        }
+      });
+    });
+  }
+
   //Boot function
   function boot() {
     initMobileNav();
@@ -301,6 +314,7 @@
     initSmoothScroll();
     initProblemCards();
     initStepCards();
+    initFeatureCards();
   }
 
   if (document.readyState === 'loading') {
