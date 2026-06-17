@@ -112,22 +112,11 @@
 <main id="main-content">
     <!-- Hero Section -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
-        <!-- Decorative background pulse rings
-        <div class="hero-bg-rings" aria-hidden="true">
-            <span class="hero-ring hero-ring--1"></span>
-            <span class="hero-ring hero-ring--2"></span>
-            <span class="hero-ring hero-ring--3"></span>
-        </div>
-        -->
+
         <div class="container">
             <div class="hero-layout">
                 <!-- Left: Text content -->
                 <div class="hero-content">
-                    <!-- Eyebrow / trust badge
-                    <p class="hero-eyebrow reveal-on-scroll" data-hero-anim="true" data-i18n="hero.eyebrow">
-                        Clinical Communication Platform
-                    </p>
-                    -->
                     <!-- Main headline -->
                     <h1 class="hero-brand" id="hero-heading" data-hero-anim="true">
                         <span class="hero-title__before" data-i18n="hero.title.before">Pulse </span><span class="hero-title__accent" data-i18n="hero.title.accent">Report</span>
@@ -176,75 +165,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Right: Clinical visual element
-                <aside class="hero-visual" aria-label="Platform visual summary" data-hero-anim="true">
-                    <div class="hero-card" role="img" aria-label="PulseReport dashboard preview">
-                        <-- Card header
-                        <div class="hero-card__header">
-                            <span class="hero-card__dot hero-card__dot--red" aria-hidden="true"></span>
-                            <span class="hero-card__dot hero-card__dot--yellow" aria-hidden="true"></span>
-                            <span class="hero-card__dot hero-card__dot--green" aria-hidden="true"></span>
-                            <span class="hero-card__title" aria-hidden="true">PulseReport</span>
-                        </div>
-
-                        <-- Patient row mock
-                        <div class="hero-card__body">
-                            <p class="hero-card__eyebrow" data-i18n="hero.card.eyebrow">Active shift handoff</p>
-
-                            <-- SBAR mini-row --
-                            <div class="hero-card__sbar-row" aria-hidden="true">
-                                <span class="hero-card__sbar-badge">S</span>
-                                <span class="hero-card__sbar-badge">B</span>
-                                <span class="hero-card__sbar-badge">A</span>
-                                <span class="hero-card__sbar-badge">R</span>
-                                <span class="hero-card__sbar-status hero-card__sbar-status--complete" data-i18n="hero.card.status">Complete</span>
-                            </div>
-
-                            <-- Vitals mini-grid --
-                            <div class="hero-card__vitals" aria-label="Sample vital signs">
-                                <div class="hero-card__vital">
-                                    <span class="hero-card__vital-label" data-i18n="hero.card.hr">HR</span>
-                                    <span class="hero-card__vital-value">78 <small>bpm</small></span>
-                                </div>
-                                <div class="hero-card__vital">
-                                    <span class="hero-card__vital-label" data-i18n="hero.card.bp">BP</span>
-                                    <span class="hero-card__vital-value">120/80</span>
-                                </div>
-                                <div class="hero-card__vital">
-                                    <span class="hero-card__vital-label" data-i18n="hero.card.spo2">SpO2</span>
-                                    <span class="hero-card__vital-value">98<small>%</small></span>
-                                </div>
-                                <div class="hero-card__vital">
-                                    <span class="hero-card__vital-label" data-i18n="hero.card.temp">Temp</span>
-                                    <span class="hero-card__vital-value">36.7<small>°C</small></span>
-                                </div>
-                            </div>
-
-                            <-- Pulse line decoration --
-                            <div class="hero-card__pulse-line" aria-hidden="true">
-                                <svg viewBox="0 0 200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                                    <polyline
-                                      points="0,20 30,20 45,8 55,32 65,5 75,35 85,20 120,20 135,14 145,26 155,20 200,20"
-                                      fill="none"
-                                      stroke="#14b8a6"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      class="hero-card__ecg-line"
-                                    />
-                                </svg>
-                            </div>
-
-                            <-- Audit trail tag --
-                            <div class="hero-card__audit" aria-hidden="true">
-                                <svg class="hero-card__audit-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 3.75a.75.75 0 00-1.5 0v3.5c0 .414.336.75.75.75h2.5a.75.75 0 000-1.5H8.75V4.75z"/></svg>
-                                <span data-i18n="hero.card.audit">Audit log active</span>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                -->
                 <!-- Floating stethoscope image -->
                 <div class="hero-visual__img-wrap" aria-hidden="true">
                     <img src="assets/stethoscope-with-heart-drawing.png"
@@ -297,7 +217,6 @@
     <section class="problem" id="problem" aria-labelledby="problem-heading">
         <div class="container">
             <div class="problem-header reveal-on-scroll">
-                <!--<p class="problem-eyebrow" data-i18n="problem.eyebrow">The challenge</p>-->
                 <h2 class="section-title problem-heading" id="problem-heading" data-i18n="problem.title">The problem we solve</h2>
                 <p class="problem-lead" data-i18n="problem.lead">Clinical environments handle critical, time-sensitive information every day at every hour and yet the tools used to manage that information often fall short.</p>
             </div>
@@ -810,44 +729,7 @@
 
         </div>
     </section>
-    <!--FAQ-->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="section-title">Preguntas frecuentes</h2>
-            <p class="faq__subtitle">Respuestas rápidas antes de agendar una demo.</p>
-
-            <div class="faq-list">
-                <details class="faq-item">
-                    <summary>¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
-                    <p class="faq-answer">
-                        Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>¿La información puede consultarse en tiempo real?</summary>
-                    <p class="faq-answer">
-                        Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>¿Es una solución para hospitales y clínicas?</summary>
-                    <p class="faq-answer">
-                        Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
-                    </p>
-                </details>
-
-                <details class="faq-item">
-                    <summary>¿Qué modelo de servicio ofrece Care-Labs?</summary>
-                    <p class="faq-answer">
-                        Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
-                    </p>
-                </details>
-            </div>
-        </div>
-    </section>
-    <!--Contact-->
+    <!-- Contact-us -->
     <section class="contact-section" id="contact" aria-labelledby="contact-heading">
         <div class="contact-hero">
             <div class="container">
@@ -950,6 +832,44 @@
             </div>
         </div>
     </section>
+    <!--FAQ-->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="faq__subtitle">Respuestas rápidas antes de agendar una demo.</p>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
+                    <p class="faq-answer">
+                        Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿La información puede consultarse en tiempo real?</summary>
+                    <p class="faq-answer">
+                        Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Es una solución para hospitales y clínicas?</summary>
+                    <p class="faq-answer">
+                        Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué modelo de servicio ofrece Care-Labs?</summary>
+                    <p class="faq-answer">
+                        Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="footer">
