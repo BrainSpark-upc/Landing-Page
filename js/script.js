@@ -9,8 +9,8 @@
       const isOpen = menu.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute(
-        'aria-label',
-        isOpen ? 'Close navigation menu' : 'Open navigation menu'
+          'aria-label',
+          isOpen ? 'Close navigation menu' : 'Open navigation menu'
       );
       toggle.classList.toggle('is-open', isOpen);
     });
@@ -36,7 +36,7 @@
 
   function initHeroAnimations() {
     const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
+        '(prefers-reduced-motion: reduce)'
     ).matches;
 
     const hero = document.querySelector('.hero');
@@ -74,26 +74,26 @@
     }
 
     const prefersReduced = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
+        '(prefers-reduced-motion: reduce)'
     ).matches;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const delay = parseInt(el.dataset.revealDelay || '0', 10);
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            const delay = parseInt(el.dataset.revealDelay || '0', 10);
 
-          if (prefersReduced || delay === 0) {
-            el.classList.add('is-visible');
-          } else {
-            setTimeout(() => el.classList.add('is-visible'), delay);
-          }
+            if (prefersReduced || delay === 0) {
+              el.classList.add('is-visible');
+            } else {
+              setTimeout(() => el.classList.add('is-visible'), delay);
+            }
 
-          observer.unobserve(el);
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -48px 0px' }
+            observer.unobserve(el);
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -48px 0px' }
     );
 
     document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
@@ -125,14 +125,14 @@
     if (!('IntersectionObserver' in window)) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          animateCounter(entry.target);
-          observer.unobserve(entry.target);
-        });
-      },
-      { threshold: 0.5 }
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.5 }
     );
 
     document.querySelectorAll('[data-counter-target]').forEach((el) => {
@@ -142,10 +142,10 @@
 
   function initActiveNav() {
     const sections = Array.from(
-      document.querySelectorAll('main section[id]')
+        document.querySelectorAll('main section[id]')
     );
     const navLinks = Array.from(
-      document.querySelectorAll('.nav-menu a[href^="#"]')
+        document.querySelectorAll('.nav-menu a[href^="#"]')
     );
     if (!sections.length || !navLinks.length) return;
 
@@ -221,9 +221,9 @@
 
         if (notice) {
           const msg =
-            lang === 'en'
-              ? '✓ Message sent! We will get back to you shortly.'
-              : '✓ ¡Mensaje enviado! Te responderemos pronto.';
+              lang === 'en'
+                  ? '✓ Message sent! We will get back to you shortly.'
+                  : '✓ ¡Mensaje enviado! Te responderemos pronto.';
           notice.textContent = msg;
           notice.removeAttribute('hidden');
           setTimeout(() => notice.setAttribute('hidden', ''), 6000);
@@ -236,7 +236,7 @@
     /* Real-time error clear */
     form.querySelectorAll('[required]').forEach((field) => {
       field.addEventListener('input', () =>
-        field.classList.remove('field--error')
+          field.classList.remove('field--error')
       );
     });
   }
@@ -254,10 +254,24 @@
         target.setAttribute('tabindex', '-1');
         target.focus({ preventScroll: true });
         target.addEventListener(
-          'blur',
-          () => target.removeAttribute('tabindex'),
-          { once: true }
+            'blur',
+            () => target.removeAttribute('tabindex'),
+            { once: true }
         );
+      });
+    });
+  }
+
+
+  /* Problem section */
+  function initProblemCards() {
+    document.querySelectorAll('.problem-card').forEach((card) => {
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('is-focused');
+          setTimeout(() => card.classList.remove('is-focused'), 600);
+        }
       });
     });
   }
@@ -272,6 +286,7 @@
     initNavbarShadow();
     initContactForm();
     initSmoothScroll();
+    initProblemCards();
   }
 
   if (document.readyState === 'loading') {
