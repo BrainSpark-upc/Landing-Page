@@ -1,138 +1,697 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="BrainSpark - Care-Labs">
-  <title>PulseReport | Care-Labs</title>
-  <link rel="canonical" href="https://github.com/BrainSpark-upc/Landing-Page">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Organization",
-      "name": "PulseReport",
-      "alternateName": "Care-Labs",
-      "url": "https://github.com/BrainSpark-upc/Landing-Page",
-      "email": "contacto@pulsereport.pe",
-      "areaServed": "PE"
-    }
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta name="author" content="BrainSpark">
+    <meta name="description" content="PulseReport es una plataforma para centralizar traspasos SBAR, signos vitales, tratamientos y eventos críticos en entornos clínicos." />
+    <meta name="keywords" content="PulseReport, Care-Labs, SBAR, salud, enfermería, traspaso clínico, signos vitales, trazabilidad, hospital, clínica" />
+    <meta name="keywords" content="PulseReport, SBAR, salud, enfermería, traspaso clínico, signos vitales, trazabilidad, hospital, clínica">
+    <meta name="theme-color" content="#0066CC" />
+
+    <title>PulseReport | BrainSpark</title>
+
+    <link rel="canonical" href="https://pulsereport-frontend.web.app/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/pestana-logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Organization",
+            "name": "PulseReport",
+            "alternateName": "BrainSpark",
+            "url": "https://pulsereport-frontend.web.app/",
+            "email": "contacto@pulsereport.pe",
+            "areaServed": "PE"
+        }
+    </script>
 </head>
 <body>
-
-  <a href="#main-content" class="skip-link" id="skiplink">Saltar al contenido principal</a>
-  <!-- Navigation -->
-  <nav class="navbar" aria-label="Navegación Principal">
+<a href="#main-content" class="skip-link" id="skiplink">Saltar al contenido principal</a>
+<!-- Navigation -->
+<nav class="navbar" aria-label="Navegación Principal">
     <div class="container">
-      <div class="nav-wrapper">
-        <a class="logo" id="logoLink" href="#" aria-label="Ir al inicio">
-          <img class="logo-image" src="public/logo.png" alt="Logo PulseReport">
-          <span class="logo-text">PulseReport</span>
-        </a>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#product-demo">Plataforma</a></li>
-          <li><a href="#features">Características</a></li>
-          <li><a href="#how-it-works">¿Cómo funciona?</a></li>
-          <li><a href="#benefits">Beneficios</a></li>
-          <li><a href="#faq">Preguntas Frecuentes</a></li>
-          <li><a href="team">Nosotros</a></li>
-        </ul>
-        <div class="nav-header-end">
-          <div class="language-swicher" role="group" aria-label="Idioma">
-            <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">
-              <span class="lang-btn__flag" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <clipPath id="flag-uk-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
-                  </defs>
-                  <g clip-path="url(#flag-uk-clip)">
-                    <!-- Blue background -->
-                    <rect width="24" height="24" fill="#012169"/>
-                    <!-- White diagonals (X) -->
-                    <line x1="0" y1="0" x2="24" y2="24" stroke="#ffffff" stroke-width="4.8"/>
-                    <line x1="24" y1="0" x2="0" y2="24" stroke="#ffffff" stroke-width="4.8"/>
-                    <!-- Red diagonals (St Patrick's cross) -->
-                    <line x1="0" y1="0" x2="24" y2="24" stroke="#C8102E" stroke-width="2"/>
-                    <line x1="24" y1="0" x2="0" y2="24" stroke="#C8102E" stroke-width="2"/>
-                    <!-- White cross -->
-                    <rect x="10" y="0" width="4" height="24" fill="#ffffff"/>
-                    <rect x="0" y="10" width="24" height="4" fill="#ffffff"/>
-                    <!-- Red cross (St George's cross) -->
-                    <rect x="10.8" y="0" width="2.4" height="24" fill="#C8102E"/>
-                    <rect x="0" y="10.8" width="24" height="2.4" fill="#C8102E"/>
-                  </g>
-                  <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
-                </svg>
-              </span>
-              <span class="lang-btn__label">EN</span>
-            </button>
-            <button type="button" class="lang-btn active" data-lang="es" aria-pressed="false">
-              <span class="lang-btn__flag" aria-hidden="true">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <clipPath id="flag-es-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
-                  </defs>
-                  <g clip-path="url(#flag-es-clip)">
-                    <rect width="24" height="24" fill="#aa151b"/>
-                    <rect y="6" width="24" height="12" fill="#f1bf00"/>
-                  </g>
-                  <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
-                </svg>
-              </span>
-              <span class="lang-btn__label">ES</span>
-            </button>
-          </div>
-          <button class="menu-toggle" id="menuToggle" aria-label="Toogle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+        <div class="nav-wrapper">
+            <a class="logo" id="logoLink" href="#" aria-label="Ir al inicio">
+                <img class="logo-image" src="assets/logo.png" alt="Logo PulseReport">
+
+                <span class="logo-text">PulseReport</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#product-demo" data-i18n="nav.platform">Plataforma</a></li>
+                <li><a href="#features" data-i18n="nav.features">Características</a></li>
+                <li><a href="#how-it-works" data-i18n="nav.how-it-works">¿Cómo funciona?</a></li>
+                <li><a href="#benefits" data-i18n="nav.benefits">Beneficios</a></li>
+                <li><a href="#faq" data-i18n="nav.faq">Preguntas Frecuentes</a></li>
+                <li><a href="#team" data-i18n="nav.team">Nosotros</a></li>
+            </ul>
+
+            <div class="nav-header-end">
+                <div class="language-swicher" role="group" aria-label="Idioma">
+                    <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">
+                        <span class="lang-btn__flag" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="flag-uk-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#flag-uk-clip)">
+                                    <!-- Blue background -->
+                                    <rect width="24" height="24" fill="#012169"/>
+                                    <!-- White diagonals (X) -->
+                                    <line x1="0" y1="0" x2="24" y2="24" stroke="#ffffff" stroke-width="4.8"/>
+                                    <line x1="24" y1="0" x2="0" y2="24" stroke="#ffffff" stroke-width="4.8"/>
+                                    <!-- Red diagonals (St Patrick's cross) -->
+                                    <line x1="0" y1="0" x2="24" y2="24" stroke="#C8102E" stroke-width="2"/>
+                                    <line x1="24" y1="0" x2="0" y2="24" stroke="#C8102E" stroke-width="2"/>
+                                    <!-- White cross -->
+                                    <rect x="10" y="0" width="4" height="24" fill="#ffffff"/>
+                                    <rect x="0" y="10" width="24" height="4" fill="#ffffff"/>
+                                    <!-- Red cross (St George's cross) -->
+                                    <rect x="10.8" y="0" width="2.4" height="24" fill="#C8102E"/>
+                                    <rect x="0" y="10.8" width="24" height="2.4" fill="#C8102E"/>
+                                </g>
+                                <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
+                            </svg>
+                        </span>
+                        <span class="lang-btn__label">EN</span>
+                    </button>
+                    <button type="button" class="lang-btn active" data-lang="es" aria-pressed="false">
+                        <span class="lang-btn__flag" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <clipPath id="flag-es-clip"><circle cx="12" cy="12" r="11.5"/></clipPath>
+                                </defs>
+                                <g clip-path="url(#flag-es-clip)">
+                                    <rect width="24" height="24" fill="#aa151b"/>
+                                    <rect y="6" width="24" height="12" fill="#f1bf00"/>
+                                </g>
+                                <circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(15,23,42,0.18)"/>
+                            </svg>
+                        </span>
+                        <span class="lang-btn__label">ES</span>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toogle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-      </div>
     </div>
-  </nav>
+</nav>
 
-  <main id="main-content">
-
+<main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-brand"><span class="hero-title__before">Pulse </span><span class="hero-title__accent">Report</span></h1>
-          <h2 class="hero-subtitle"><span class="hero-subtitle__before">Tu solución integral para el monitoreo de la salud cardiovascular.</span></h2>
-          <p class="hero-description">Centraliza traspasos SBAR, signos vitales, tratamientos y eventos críticos en la sala quirúrgica en una sola plataforma segura, clara y accesible en tiempo real.</p>
-          <div class="hero-buttons">
-            <a class="btn btn-primary" id="demoBtn" href="https://pulsereport-frontend.web.app/">Visualizar Demo</a>
-            <a class="btn btn-secondary" id="how-it-workdsBtn" href="#how-it-works">Ver cómo funciona</a>
-          </div>
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+        <!-- Decorative background pulse rings
+        <div class="hero-bg-rings" aria-hidden="true">
+            <span class="hero-ring hero-ring--1"></span>
+            <span class="hero-ring hero-ring--2"></span>
+            <span class="hero-ring hero-ring--3"></span>
         </div>
-      </div>
+        -->
+        <div class="container">
+            <div class="hero-layout">
+                <!-- Left: Text content -->
+                <div class="hero-content">
+                    <!-- Eyebrow / trust badge
+                    <p class="hero-eyebrow reveal-on-scroll" data-hero-anim="true" data-i18n="hero.eyebrow">
+                        Clinical Communication Platform
+                    </p>
+                    -->
+                    <!-- Main headline -->
+                    <h1 class="hero-brand" id="hero-heading" data-hero-anim="true">
+                        <span class="hero-title__before" data-i18n="hero.title.before">Pulse </span><span class="hero-title__accent" data-i18n="hero.title.accent">Report</span>
+                    </h1>
+
+                    <!-- Supporting subtitle -->
+                    <h2 class="hero-subtitle" data-hero-anim="true">
+                        <span class="hero-subtitle__before" data-i18n="hero.title">Prevent clinical information loss between shifts</span>
+                    </h2>
+
+                    <!-- Value proposition -->
+                    <p class="hero-description" data-hero-anim="true" data-i18n="hero.subtitle">
+                        Centralize SBAR handoffs, vital signs, treatments, and critical events in one secure, clear, and real-time accessible platform.
+                    </p>
+
+                    <!-- Social proof micro-badges -->
+                    <div class="hero-trust" data-hero-anim="true" aria-label="Key platform highlights">
+                        <span class="hero-trust__badge">
+                            <svg class="hero-trust__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span data-i18n="hero.badge.1">SBAR Digital</span>
+                        </span>
+                        <span class="hero-trust__badge">
+                            <svg class="hero-trust__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span data-i18n="hero.badge.2">Real-time</span>
+                        </span>
+                        <span class="hero-trust__badge">
+                            <svg class="hero-trust__icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            <span data-i18n="hero.badge.3">Audit trail</span>
+                        </span>
+                    </div>
+
+                    <!-- CTA buttons -->
+                    <div class="hero-buttons" data-hero-anim="true">
+                        <a class="btn btn-primary" id="demoBtn"
+                           href="https://pulsereport-frontend.web.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           data-i18n="cta.demo"
+                           aria-label="Open PulseReport web application demo">
+                            Request demo
+                        </a>
+                        <a class="btn btn-secondary" id="how-it-worksBtn"
+                           href="#how-it-works"
+                           data-i18n="cta.how-it-works">
+                            See how it works
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Clinical visual element
+                <aside class="hero-visual" aria-label="Platform visual summary" data-hero-anim="true">
+                    <div class="hero-card" role="img" aria-label="PulseReport dashboard preview">
+                        <-- Card header
+                        <div class="hero-card__header">
+                            <span class="hero-card__dot hero-card__dot--red" aria-hidden="true"></span>
+                            <span class="hero-card__dot hero-card__dot--yellow" aria-hidden="true"></span>
+                            <span class="hero-card__dot hero-card__dot--green" aria-hidden="true"></span>
+                            <span class="hero-card__title" aria-hidden="true">PulseReport</span>
+                        </div>
+
+                        <-- Patient row mock
+                        <div class="hero-card__body">
+                            <p class="hero-card__eyebrow" data-i18n="hero.card.eyebrow">Active shift handoff</p>
+
+                            <-- SBAR mini-row --
+                            <div class="hero-card__sbar-row" aria-hidden="true">
+                                <span class="hero-card__sbar-badge">S</span>
+                                <span class="hero-card__sbar-badge">B</span>
+                                <span class="hero-card__sbar-badge">A</span>
+                                <span class="hero-card__sbar-badge">R</span>
+                                <span class="hero-card__sbar-status hero-card__sbar-status--complete" data-i18n="hero.card.status">Complete</span>
+                            </div>
+
+                            <-- Vitals mini-grid --
+                            <div class="hero-card__vitals" aria-label="Sample vital signs">
+                                <div class="hero-card__vital">
+                                    <span class="hero-card__vital-label" data-i18n="hero.card.hr">HR</span>
+                                    <span class="hero-card__vital-value">78 <small>bpm</small></span>
+                                </div>
+                                <div class="hero-card__vital">
+                                    <span class="hero-card__vital-label" data-i18n="hero.card.bp">BP</span>
+                                    <span class="hero-card__vital-value">120/80</span>
+                                </div>
+                                <div class="hero-card__vital">
+                                    <span class="hero-card__vital-label" data-i18n="hero.card.spo2">SpO2</span>
+                                    <span class="hero-card__vital-value">98<small>%</small></span>
+                                </div>
+                                <div class="hero-card__vital">
+                                    <span class="hero-card__vital-label" data-i18n="hero.card.temp">Temp</span>
+                                    <span class="hero-card__vital-value">36.7<small>°C</small></span>
+                                </div>
+                            </div>
+
+                            <-- Pulse line decoration --
+                            <div class="hero-card__pulse-line" aria-hidden="true">
+                                <svg viewBox="0 0 200 40" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline
+                                      points="0,20 30,20 45,8 55,32 65,5 75,35 85,20 120,20 135,14 145,26 155,20 200,20"
+                                      fill="none"
+                                      stroke="#14b8a6"
+                                      stroke-width="2"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      class="hero-card__ecg-line"
+                                    />
+                                </svg>
+                            </div>
+
+                            <-- Audit trail tag --
+                            <div class="hero-card__audit" aria-hidden="true">
+                                <svg class="hero-card__audit-icon" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm.75 3.75a.75.75 0 00-1.5 0v3.5c0 .414.336.75.75.75h2.5a.75.75 0 000-1.5H8.75V4.75z"/></svg>
+                                <span data-i18n="hero.card.audit">Audit log active</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                -->
+                <!-- Floating stethoscope image -->
+                <div class="hero-visual__img-wrap" aria-hidden="true">
+                    <img src="assets/stethoscope-with-heart-drawing.png"
+                         alt=""
+                         class="hero-visual__img"
+                         width="1000"
+                         height="1000"
+                         loading="eager"
+                         decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Product-Demo-->
+    <section class="product-demo" id="product-demo">
+        <div class="container">
+            <h2 class="section-title product-demo__title">Plataforma y propuesta de valor</h2>
+            <p class="product-demo__lead">
+                PulseReport centraliza la información clínica clave para que el traspaso entre turnos sea más claro, rápido y confiable.
+            </p>
+
+            <div class="product-demo__value-grid">
+                <article class="value-card">
+                    <h3 class="value-card__label">Problema</h3>
+                    <p class="value-card__text">
+                        La información clínica suele quedar dispersa en hojas, chats o registros parciales, lo que genera omisiones y pérdida de continuidad asistencial.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-card__label">Para quién</h3>
+                    <p class="value-card__text">
+                        Hospitales, clínicas privadas y áreas de enfermería cardiovascular que necesitan registrar y consultar información crítica con orden.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-card__label">Beneficio</h3>
+                    <p class="value-card__text">
+                        Mejora la trazabilidad, reduce errores de traspaso y permite un seguimiento más seguro y oportuno del paciente.
+                    </p>
+                </article>
+            </div>
+        </div>
     </section>
 
     <!-- Who is it for? -->
     <section class="who-is-it-for" id="who-is-it-for">
-      <div class="container">
-        <h2 class="section-title">¿A quién va dirigido PulseReport?</h2>
-        <p class="section-description">PulseReport está diseñado para profesionales de la salud, hospitales y clínicas que buscan mejorar el monitoreo de la salud cardiovascular de sus pacientes, optimizar la comunicación en la sala quirúrgica y garantizar una atención de calidad.</p>
-        <div class="who-is-it-for__cards">
-          <div class="card">
-            <h3 class="card-title">Profesionales de la Salud</h3>
-            <p class="card-description">Médicos, enfermeros y personal sanitario que necesitan una herramienta eficiente para monitorear signos vitales y eventos críticos en tiempo real.</p>
-          </div>
+        <div class="container">
+            <h2 class="section-title">¿A quién va dirigido PulseReport?</h2>
+            <div class="cards-grid three-columns">
+                <article class="card">
+                    <h3 class="audience1">Hospitales</h3>
+                    <p class="audience1-description">
+                        Instituciones que necesitan mejorar la continuidad asistencial y la trazabilidad clínica entre áreas y turnos.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="audience2">Clínicas privadas</h3>
+                    <p class="audience2-description">
+                        Centros que buscan digitalizar procesos clínicos críticos y organizar mejor la información del paciente.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3 class="audience3-title">Áreas de enfermería cardiovascular</h3>
+                    <p class="audience3-description">
+                        Equipos que requieren registrar SBAR, signos vitales, tratamientos y eventos clínicos con mayor orden y rapidez.
+                    </p>
+                </article>
+            </div>
         </div>
-      </div>
-      </section>
+    </section>
 
-  </main>
+    <!--How-it-works-->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">¿Cómo funciona?</h2>
 
-  <footer class="footer">
-    <div class="container footer__container">
-      <p>&copy; 2026 PulseReport. Todos los derechos reservados.</p>
+            <div class="how-it-works-layout">
+                <div class="how-it-works-steps">
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h3>Registrar información clínica</h3>
+                            <p>Captura traspasos SBAR, signos vitales, tratamientos y eventos críticos en un solo lugar.</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h3>Compartir y monitorear</h3>
+                            <p>Consulta información actualizada en tiempo real para sostener la continuidad asistencial.</p>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h3>Auditar y dar seguimiento</h3>
+                            <p>Revisa el historial de acciones y decisiones para mejorar control y seguridad clínica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="how-it-works-visual" aria-label="Resumen visual del flujo">
+                    <div class="how-it-works-image-frame">
+                        <div class="visual-summary">
+                            <p class="visual-summary__eyebrow">Flujo clínico</p>
+                            <ul class="visual-summary__list">
+                                <li>SBAR</li>
+                                <li>Signos vitales</li>
+                                <li>Tratamientos</li>
+                                <li>Eventos críticos</li>
+                                <li>Trazabilidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <!--Features-->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-head">
+                <p class="features-eyebrow">FUNCIONALIDADES</p>
+                <h2 class="section-title">Características principales</h2>
+                <p class="features-lead">
+                    PulseReport reúne las funciones necesarias para organizar, consultar y seguir información clínica relevante.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>SBAR digital</h3>
+                    <p>Estandariza el traspaso de información entre turnos y áreas asistenciales.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Gestión básica de pacientes</h3>
+                    <p>Organiza datos esenciales del paciente para una atención más clara y estructurada.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Seguimiento de tratamientos</h3>
+                    <p>Registra y consulta tratamientos para mejorar la continuidad del cuidado.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Monitoreo de signos vitales</h3>
+                    <p>Lleva control clínico básico con información disponible en tiempo real.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Historial clínico digital</h3>
+                    <p>Centraliza la información relevante para una mejor consulta y seguimiento.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true"></div>
+                    <h3>Log de auditoría inalterable</h3>
+                    <p>Mantiene trazabilidad de eventos críticos y acciones dentro de la plataforma.</p>
+                </div>
+            </div>
+
+            <p class="features-footnote">
+                Confiabilidad, seguridad y control en cada etapa. <span>Tu operación, siempre mejor ordenada.</span>
+            </p>
+        </div>
+    </section>
+    <!--Benefits-->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="benefits-layout">
+                <div class="benefits-content">
+                    <p class="benefits-eyebrow">Salud cardiovascular</p>
+                    <h2 class="section-title benefits-heading">Beneficios de PulseReport</h2>
+                    <p class="benefits-lead">
+                        Una plataforma pensada para reducir desorden, mejorar seguimiento y reforzar la seguridad asistencial.
+                    </p>
+
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Reduce pérdidas de información</h3>
+                                <p>Evita que datos importantes queden dispersos entre distintos canales o formatos.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Facilita seguimiento en tiempo real</h3>
+                                <p>Permite revisar registros clínicos clave de forma más rápida y clara.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Mejora la trazabilidad</h3>
+                                <p>Conserva un historial útil para supervisión, auditoría y control interno.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit-item">
+                            <div class="benefit-content">
+                                <h3>Disminuye procesos manuales</h3>
+                                <p>Reduce la dependencia de hojas sueltas, mensajes dispersos o registros incompletos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits-images" aria-hidden="true">
+                    <div class="benefit-photo benefit-photo--left">
+                        <img src="assets/logo.png" width="500" height="500" alt="" loading="lazy" decoding="async">
+                    </div>
+                    <div class="benefit-photo benefit-photo--right">
+                        <img src="assets/logo.png" width="500" height="500" alt="" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Team-->
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="section-title">Nuestro equipo</h2>
+            <p class="team-intro">
+                Detrás de Care-Labs hay un equipo comprometido con mejorar la forma en que se gestiona la información clínica día a día.
+            </p>
+
+            <div class="team-grid">
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Adrian-photo.jpg" alt="Adrian Rios" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Líder de proyecto</p>
+                        <h3 class="team-name">Adrian Rios</h3>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Alex-photo.jpg" alt="Alexander Aliaga" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Alexander Aliaga</h3>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Anhelo-photo.jpg" alt="Anhelo" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Anhelo</h3>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card-photo">
+                        <img src="assets/Johan-photo.png" alt="Johan" loading="lazy" decoding="async">
+                    </div>
+                    <div class="team-card-footer">
+                        <p class="team-role">Miembro</p>
+                        <h3 class="team-name">Johan</h3>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!--FAQ-->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas frecuentes</h2>
+            <p class="faq__subtitle">Respuestas rápidas antes de agendar una demo.</p>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿PulseReport está orientado solo a enfermería cardiovascular?</summary>
+                    <p class="faq-answer">
+                        Está pensado especialmente para ese entorno, pero su estructura puede adaptarse a otros contextos clínicos especializados.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿La información puede consultarse en tiempo real?</summary>
+                    <p class="faq-answer">
+                        Sí, la plataforma está orientada a permitir acceso rápido y actualizado a los registros clínicos principales.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Es una solución para hospitales y clínicas?</summary>
+                    <p class="faq-answer">
+                        Sí, está dirigida a hospitales, clínicas privadas, centros especializados y profesionales de salud que necesiten orden y trazabilidad.
+                    </p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>¿Qué modelo de servicio ofrece Care-Labs?</summary>
+                    <p class="faq-answer">
+                        Care-Labs plantea un modelo SaaS por suscripción, con posibilidad de crecer según las necesidades de cada institución.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+    <!--Contact-->
+    <section class="contact-section" id="contact">
+        <div class="contact-hero">
+            <div class="container">
+                <h2 class="section-title">¿Listo para mejorar tu flujo clínico?</h2>
+                <p class="contact-hero__subtitle">
+                    Solicita una demo y conoce cómo PulseReport puede ayudarte a ordenar traspasos, trazabilidad y seguimiento.
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-split-wrap">
+            <div class="container">
+                <div class="contact-split-board" id="contact-info">
+                    <div class="contact-split__col contact-split__col--form">
+                        <p class="contact-split__eyebrow contact-split__eyebrow--form">Déjanos tus datos</p>
+                        <p class="contact-split__intro">
+                            Usa este formulario para consultas, cotizaciones o para solicitar una demo.
+                        </p>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="contact-form__grid2">
+                                <label class="contact-form__field">
+                                    <span class="contact-form__label contact-form__label--first">Nombre</span>
+                                    <input type="text" name="nombre" autocomplete="given-name" required>
+                                </label>
+
+                                <label class="contact-form__field">
+                                    <span class="contact-form__label contact-form__label--last">Apellidos</span>
+                                    <input type="text" name="apellidos" autocomplete="family-name" required>
+                                </label>
+                            </div>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--email">Correo electrónico</span>
+                                <input type="email" name="email" autocomplete="email" required>
+                            </label>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--country">Institución</span>
+                                <input type="text" name="institucion" autocomplete="organization" required>
+                            </label>
+
+                            <label class="contact-form__field">
+                                <span class="contact-form__label contact-form__label--message">Mensaje</span>
+                                <textarea
+                                  name="mensaje"
+                                  class="contact-form__textarea"
+                                  rows="4"
+                                  placeholder="Cuéntanos qué necesitas: demo, tipo de institución, volumen de usuarios, etc."
+                                ></textarea>
+                            </label>
+
+                            <button type="submit" class="btn contact-form__submit">Enviar al equipo</button>
+                        </form>
+
+                        <p id="contactSubmitNotice" class="contact-submit-notice" role="status" aria-live="polite" hidden></p>
+                    </div>
+
+                    <div class="contact-split__col contact-split__col--info">
+                        <p class="contact-split__eyebrow contact-split__eyebrow--info">Contáctanos</p>
+
+                        <div class="contact-info-block">
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--phone">Correo</span>
+                                <p class="contact-info-row__dd">
+                                    <a href="mailto:contacto@pulsereport.pe">contacto@pulsereport.pe</a>
+                                </p>
+                            </div>
+
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--address">Enfoque</span>
+                                <p class="contact-info-row__dd contact-address-text">
+                                    Continuidad asistencial, trazabilidad clínica y soporte para equipos de salud.
+                                </p>
+                            </div>
+
+                            <div class="contact-info-row">
+                                <span class="contact-info-row__dt contact-info-row__dt--email">Servicio</span>
+                                <p class="contact-info-row__dd">
+                                    Demo de la plataforma y evaluación de necesidades por institución.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4 class="footer-brand">
+                    <img class="footer-brand__logo" src="assets/logo.png" alt="Logo PulseReport">
+                    <span class="footer-brand__name">PulseReport</span>
+                </h4>
+                <p>Gestión digital para la continuidad asistencial.</p>
+                <p class="footer-social">
+                    <a href="mailto:contacto@pulsereport.pe">contacto@pulsereport.pe</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Producto</h4>
+                <ul>
+                    <li><a href="#product-demo">Plataforma</a></li>
+                    <li><a href="#features">Características</a></li>
+                    <li><a href="#how-it-works">Cómo funciona</a></li>
+                    <li><a href="#benefits">Beneficios</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#team">Nosotros</a></li>
+                    <li><a href="#faq">Preguntas frecuentes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Care-Labs. Todos los derechos reservados.</p>
+        </div>
     </div>
-  </footer>
+</footer>
 
+<script src="js/i18n.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
