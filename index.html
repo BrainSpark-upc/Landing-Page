@@ -463,56 +463,87 @@
         </div>
     </section>
     <!--Features-->
-    <section class="features" id="features">
+    <section class="features" id="features" aria-labelledby="features-heading">
         <div class="container">
-            <div class="features-head">
-                <p class="features-eyebrow">FUNCIONALIDADES</p>
-                <h2 class="section-title">Características principales</h2>
-                <p class="features-lead">
+            <div class="features-head reveal-on-scroll">
+                <p class="features-eyebrow" data-i18n="features.eyebrow">FUNCIONALIDADES</p>
+                <h2 class="section-title" id="features-heading" data-i18n="features.title">Características principales</h2>
+                <p class="features-lead" data-i18n="features.lead">
                     PulseReport reúne las funciones necesarias para organizar, consultar y seguir información clínica relevante.
                 </p>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>SBAR digital</h3>
-                    <p>Estandariza el traspaso de información entre turnos y áreas asistenciales.</p>
-                </div>
+            <div class="features-grid" role="list">
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="0" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 3v4a1 1 0 001 1h4"/>
+                            <path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"/>
+                            <line x1="9" y1="13" x2="15" y2="13"/>
+                            <line x1="9" y1="17" x2="13" y2="17"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.1.title">SBAR digital</h3>
+                    <p data-i18n="features.1.desc">Estandariza el traspaso de información entre turnos y áreas asistenciales.</p>
+                </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>Gestión básica de pacientes</h3>
-                    <p>Organiza datos esenciales del paciente para una atención más clara y estructurada.</p>
-                </div>
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="80" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="3.5"/>
+                            <path d="M5 20v-1a7 7 0 0114 0v1"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.2.title">Gestión básica de pacientes</h3>
+                    <p data-i18n="features.2.desc">Organiza datos esenciales del paciente para una atención más clara y estructurada.</p>
+                </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>Seguimiento de tratamientos</h3>
-                    <p>Registra y consulta tratamientos para mejorar la continuidad del cuidado.</p>
-                </div>
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="160" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3.5" y="9" width="17" height="6" rx="3"/>
+                            <line x1="12" y1="9" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.3.title">Seguimiento de tratamientos</h3>
+                    <p data-i18n="features.3.desc">Registra y consulta tratamientos para mejorar la continuidad del cuidado.</p>
+                </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>Monitoreo de signos vitales</h3>
-                    <p>Lleva control clínico básico con información disponible en tiempo real.</p>
-                </div>
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="80" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12h4l1.5 4L12 6l2 6h7"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.4.title">Monitoreo de signos vitales</h3>
+                    <p data-i18n="features.4.desc">Lleva control clínico básico con información disponible en tiempo real.</p>
+                </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>Historial clínico digital</h3>
-                    <p>Centraliza la información relevante para una mejor consulta y seguimiento.</p>
-                </div>
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="160" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.5.title">Historial clínico digital</h3>
+                    <p data-i18n="features.5.desc">Centraliza la información relevante para una mejor consulta y seguimiento.</p>
+                </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true"></div>
-                    <h3>Log de auditoría inalterable</h3>
-                    <p>Mantiene trazabilidad de eventos críticos y acciones dentro de la plataforma.</p>
-                </div>
+                <article class="feature-card reveal-on-scroll" data-reveal-delay="240" role="listitem" tabindex="0">
+                    <div class="feature-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="features.6.title">Log de auditoría inalterable</h3>
+                    <p data-i18n="features.6.desc">Mantiene trazabilidad de eventos críticos y acciones dentro de la plataforma.</p>
+                </article>
             </div>
 
-            <p class="features-footnote">
-                Confiabilidad, seguridad y control en cada etapa. <span>Tu operación, siempre mejor ordenada.</span>
+            <p class="features-footnote reveal-on-scroll">
+                <span class="features-footnote__text" data-i18n="features.footnote.text">Confiabilidad, seguridad y control en cada etapa.</span>
+                <span class="features-footnote__highlight" data-i18n="features.footnote.highlight">Tu operación, siempre mejor ordenada.</span>
             </p>
         </div>
     </section>

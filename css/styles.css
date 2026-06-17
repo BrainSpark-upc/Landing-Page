@@ -768,19 +768,59 @@ section {
 }
 
 .feature-card {
+    position: relative;
     background: #ffffff;
     padding: 1.4rem 1.35rem 1.2rem;
     border-radius: 18px;
     text-align: left;
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     border: 1px solid #e5e7eb;
+    outline: none;
+    overflow: hidden;
 }
 
-.feature-card:hover {
+/* Top accent line, mirrors the problem-card treatment in teal */
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0f766e, #0ea5e9);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover::before,
+.feature-card:focus-visible::before {
+    transform: scaleX(1);
+}
+
+.feature-card:hover,
+.feature-card:focus-visible {
     transform: translateY(-4px);
     box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
     border-color: rgba(15, 118, 110, 0.3);
+    outline: 2px solid rgba(15, 118, 110, 0.4);
+    outline-offset: 2px;
+}
+
+.feature-card:hover .feature-icon,
+.feature-card:focus-visible .feature-icon {
+    background: #d8f6ee;
+    transform: scale(1.06);
+}
+
+.feature-card.is-pulsing .feature-icon {
+    animation: feature-icon-pulse 0.6s ease;
+}
+
+@keyframes feature-icon-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.16); }
 }
 
 .feature-icon {
@@ -793,26 +833,13 @@ section {
     margin-bottom: 0.95rem;
     color: #0f766e;
     background: #ecfdf5;
-    position: relative;
-    overflow: hidden;
+    transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.feature-icon::before,
-.feature-icon::after {
-    content: "";
-    position: absolute;
-    background: #0f766e;
-    border-radius: 999px;
-}
-
-.feature-icon::before {
-    width: 18px;
-    height: 2.5px;
-}
-
-.feature-icon::after {
-    width: 2.5px;
-    height: 18px;
+.feature-icon svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .feature-card h3 {
@@ -834,7 +861,7 @@ section {
     color: #6b7280;
 }
 
-.features-footnote span {
+.features-footnote__highlight {
     color: #0f766e;
     font-weight: 700;
 }
