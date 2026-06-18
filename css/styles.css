@@ -1172,7 +1172,6 @@ section {
     height: 100%;
     border-radius: inherit;
     background: #ffffff;
-    transform: scaleX(var(--scroll-progress, 0.12));
     transform-origin: left center;
     transition: transform 0.18s ease-out;
 }
